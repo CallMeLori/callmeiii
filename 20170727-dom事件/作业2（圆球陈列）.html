@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border:none;
+        }
+        td{
+            width:60px;
+            height:60px;
+            background: red;
+            border-radius: 50%;
+            border:none;
+        }
+        .blue{
+            background: blue;
+        }
+
+    </style>
+
+    <script>
+        document.write('<table border="1">')
+        for (var i =0 ; i<5 ;i++){
+          document.write('<tr>')
+          for(var j = 0 ; j <9; j++){
+            if (i==2 ||  j==4 ){
+              document.write("<td class='blue'></td>")
+            } else {
+              document.write("<td></td>")
+            }
+
+
+          }
+
+          document.write('</tr>')
+        }
+
+        document.write('</table>')
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

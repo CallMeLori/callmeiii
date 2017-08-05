@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  var arr = [ 10, 20, 30, 40, 50, 10, 20, 30, 40, 20, 30, 20, 100, 20 ];
+  //写一个方法（有两个参数，第一个参数是数组，第二个是数组里的一个项），实现查找项在数组的索引位置
+    function searchIndex(array,item){
+        var temp = [];
+        for( var i = 0 ; i<array.length ;i++ ){
+            debugger
+           if (array[i] == item){
+
+             temp.push(i);
+           }
+        }
+        document.write(temp);
+        document.write("<br>");
+    }
+    /*
+    searchIndex(arr,20);
+    searchIndex(arr,30);
+    searchIndex(arr,10);
+    document.write("<hr>");
+    */
+
+    var arr2 = ['a','b','c','d','e','e','b','f','a','f'];
+    searchIndex(arr2,'b');
+
+
+</script>
+
+
+</body>
+</html>

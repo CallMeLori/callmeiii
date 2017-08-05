@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p><input type="button" value="红色"><input type="button" value="蓝色"><input type="button" value="绿色"></p>
+
+<script>
+    var inputs = document.getElementsByTagName('input');
+    //获取按钮对象
+    var input1 = inputs[0] , input2 = inputs[1] , input3 = inputs[2] ;
+    //获取 body元素对象
+    var body = document.getElementsByTagName('body')[0];
+
+    input1.onclick = function(){
+        body.style.background = 'red'
+    }
+
+    input2.onclick = function(){
+      body.style.background = 'blue'
+    }
+
+    input3.onclick = function(){
+      body.style.background = 'green'
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box"><span id="sp">我将被替换</span></div>
+
+<script>
+    //创建一个元素
+    var p = document.createElement('p');
+        p.innerText = "我是新的p标签";
+        p.style.color = 'red';
+        p.style.background = 'blue';
+
+    var sp = document.getElementById('sp');
+    sp.parentNode.replaceChild(p,sp);
+
+</script>
+
+
+</body>
+</html>

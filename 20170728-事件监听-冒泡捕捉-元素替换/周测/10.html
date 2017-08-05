@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--10、用js实现下面的要求 ，有如下dom结构，-->
+    <!--<div id='div1'><span id='span1'>等你来替换</span></div>-->
+    <!--并通过js创建“<i><b>新的内容</b></i>”-->
+    <!--请把里面的span标签，替换成新创建的标签及内容-->
+</head>
+<body>
+<div id='div1'>
+    <span id='span1'>等你来替换</span>
+</div>
+
+<script>
+    var div1 = document.getElementById("div1");
+    var span1 = document.getElementById("span1");
+
+    var i = document.createElement('i');
+    var b = document.createElement('b');
+
+    b.innerText = "新的内容";
+    i.appendChild(b);
+
+    span1.parentNode.replaceChild(i,span1);
+
+
+</script>
+
+</body>
+</html>

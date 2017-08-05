@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var a = 0 ;
+    var b = undefined;
+    var c = '';
+
+    var d = a ==b ;  // =>false
+    var e = b ==c ;  // =>false
+    var f = a ==c ;  // =>true
+    document.write(d+'<br>'+e +'<br>'+f);
+
+    var aa = "ddd";
+    var bb = "ff s  d";
+    var cc = aa/2;     // cc => NaN
+    var dd = bb/2;     // dd => NaN
+    var ee = cc==dd;   // false
+    //NaN (Not a number)
+    //isNaN (is not a number);
+    var ff = isNaN(c)  // ff=> true;
+
+
+    //全等
+    var aaa = a===c  ;   //aaa =>false
+    var bbb = a!==c  ;   //bbb =>true
+    alert(aaa)
+    alert( bbb)
+
+
+</script>
+
+</body>
+</html>

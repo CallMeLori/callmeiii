@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        var check = document.getElementsByClassName("check");
+
+        function quan(){
+            for(var a = 0; a<check.length;a++){
+                check[a].checked = true;
+            }
+        }
+        function xiao(){
+            for(var a =0;a<check.length;a++){
+                check[a].checked = false;
+            }
+        }
+        function fan(){
+            for (var a =0;a<check.length;a++){
+                check[a].checked =!check[a].checked;
+            }
+        }
+    </script>
+
+</head>
+<body>
+<input type="button" value="全选" id="qq1" onclick="quan()">
+<input type="button" value="取消" id="qq2" onclick="xiao()">
+<input type="button" value="反选" id="qq3" onclick="fan()">
+<br>
+<input type="checkbox" class="check"> <br>
+<input type="checkbox" class="check"> <br>
+<input type="checkbox" class="check"> <br>
+<input type="checkbox" class="check"> <br>
+<input type="checkbox" class="check"> <br>
+
+</body>
+</html>

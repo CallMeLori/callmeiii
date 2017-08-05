@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //1，定义有参函数（参数的作用：就是变量，做数据传递用，传入函数内部）
+    function fn(message){   //message 叫形参（定义中的参数）
+        document.write(message);
+        document.write("<hr>");
+    }
+    //2,调用函数（通过执行方法（函数）名称）
+    fn('你好，我是函数');     //你好，我是函数',叫实参（调用时传入的）
+
+    //3,多个参数
+    function douge(p1,p2,p3){
+      document.write(p1+"<br>");
+      document.write(p2+"<br>");
+      document.write(p3+"<hr>");
+    }
+
+    douge('张三','李四','王二');
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //变量的七种数据类型
+        //1字符串
+        var name = '王思聪';
+        var pi = "3.14";
+
+        //2数值型
+        var i = 1234;
+        var j = 2.15;
+        var k = 0;
+
+        //3 布尔类型
+        var bool = true;   //真
+        var flag = false;  //假
+
+        //4 undefined 型
+        var z ;
+        document.write(z);
+
+        //5 null 类型
+        var obj = null;
+        document.write("<br>");
+        document.write(obj);
+
+        //6 数组类型
+        var arr  = [1,2,3,4,5];
+       // var arr  = new Array(["风姐","冰冰","志玲"]);
+        document.write("<br>");
+        document.write(arr);
+
+
+        //7 对象 类型
+        var o = { name:'习大大' ,job:'中国总统',age:56 ,sex:'男', childs:["习一","习二"],
+          dept:{
+            'xunshi':[],
+            'zhengxie':[
+              {
+                a:123,
+                b:333
+              }
+            ],
+          }
+        };
+        //第二种声明对象的方式
+        var o2 = new Object();
+        o2.name = '马云'
+        //=>  o2 = {name:'马云'}
+        /*
+        //输出某个键值
+        document.write(o2.name)
+        document.write(o2["name"])
+          */
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

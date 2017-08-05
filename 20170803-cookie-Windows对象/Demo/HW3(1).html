@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: deeppink;
+            color: white;
+            position: relative;
+            left: 10px;
+            top: 10px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">MOVE</div>
+<script>
+    var box = document.getElementById("box");
+    setInterval(function(){
+       var left = box.style.left.replace('px','');
+        box.style.left = (box.style.left.replace('px','')*1+2)+'px';
+    },17)
+</script>
+</body>
+</html>

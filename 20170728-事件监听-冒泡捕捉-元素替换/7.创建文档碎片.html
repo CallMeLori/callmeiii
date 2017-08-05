@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    //获取body
+    var body  = document.getElementsByTagName('body')[0];
+    //创建文档碎片,为了优化加载的标签元素
+    var flagments = document.createDocumentFragment();
+
+    for (var i=0 ; i<1000000; i++){
+      //创建div
+      var div  = document.createElement('div');
+      div.innerText = 'div '+i;
+        flagments.appendChild(div)
+
+    }
+
+    body.appendChild(flagments)
+
+
+</script>
+
+
+</body>
+</html>

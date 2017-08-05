@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function qx(){
+          //全选
+          var checkboxes = document.getElementsByName('box');  //数组
+          /*
+          checkboxes[0].checked = true;
+          checkboxes[1].checked = true;
+          checkboxes[2].checked = true;
+          checkboxes[3].checked = true;
+          checkboxes[4].checked = true;
+          checkboxes[5].checked = true;
+          checkboxes[6].checked = true;
+          checkboxes[7].checked = true;
+          checkboxes[8].checked = true;
+          checkboxes[9].checked = true;
+           */
+          for (var ck in checkboxes){
+            checkboxes[ck].checked = true;
+          }
+        }
+
+        function qxiao(){
+          //全部取消
+          var checkboxes = document.getElementsByName('box');
+          for(var i=0;i<checkboxes.length;i++){
+            checkboxes[i].checked = false;
+          }
+        }
+
+        function fx(){
+          //反选
+          var checkboxes = document.getElementsByName('box');
+          for(var i =0 ; i< checkboxes.length; i++){
+            checkboxes[i].checked = !checkboxes[i].checked;
+          }
+
+        }
+
+    </script>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="qx" type="button" value="全选" onclick="qx()" >
+<input id="qbqx" type="button" value="全部取消" onclick="qxiao()">
+<input id="fx" type="button" value="反选" onclick="fx()">
+<div id="main">
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+</div>
+
+
+
+</body>
+</html>
+
+</body>
+</html>

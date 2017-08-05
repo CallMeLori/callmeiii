@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--7、用js动态创建一个10行5列的表格，要求奇数行为红色，偶数行为蓝色-->
+    <style>
+        table{
+            width: 500px;
+            height: 500px;
+
+        }
+        .red{
+            background-color: red;
+
+        }
+        .blue{
+            background-color: blue;
+
+        }
+    </style>
+    <script>
+        document.write("<table>");
+        for (var a=1;a<=10;a++){
+            document.write("<tr></tr>");
+            if (a%2==1){
+                for (var b=1;b<=5;b++){
+                    document.write("<td class='red'></td>");
+                }
+            }
+            else{
+                for (var b=1;b<=5;b++){
+                    document.write("<td class='blue'></td>");
+                }
+            }
+        }
+        document.write("</table>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

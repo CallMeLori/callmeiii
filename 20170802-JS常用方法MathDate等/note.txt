@@ -1,0 +1,14 @@
+1、Math、Date、setTimeout、setInterval、clearTimeout、clearInterval、cookie
+
+什么是cookie:
+1.cookie 是存储于访问者的计算机中的变量，可以设置过期时间。
+2.遵循同源策略（即必须相同域名（ip地址）+端口的网址才能访问）
+3.每当同一台计算机通过浏览器请求某个页面时，就会发送这个 cookie。
+4.你可以使用 JavaScript 来创建和取回 cookie 的值。
+5.可能被直接清除（ie浏览器Cookie存放位置是在C:\Windows\Temporary Internet Files文件夹中，
+你可以直接删掉这里面的东西或是利用Internet Explorer的"Internet选项"里的"删除文件"按钮来清除。）
+
+作用：存储一些数据，用于页面数据传递和交互，也可以用于和后端服务器做交互
+
+练习：
+实现一个页面上的时间显示（秒数需每秒改变一次）

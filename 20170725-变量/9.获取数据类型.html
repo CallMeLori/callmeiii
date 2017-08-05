@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //获取数据类型 typeof
+        var x = typeof 'rrr';
+        document.write(x);   //  =>  string
+
+        var y = typeof 1234;
+        document.write("<br>");
+        document.write(y);   //  =>  number
+
+
+        var bool = true;
+        var z = typeof bool;
+        document.write("<br>");
+        document.write(z);   //  => boolean
+
+
+        var h ;
+        document.write("<br>");
+        document.write(typeof  h);   //  =>  undefined
+
+
+        var i= null ;
+        document.write("<br>");
+        document.write(typeof  i);   //  =>  object
+
+
+        var j= ["中国",'美国','德国'] ;
+        document.write("<br>");
+        document.write(typeof  j);   //  =>  object
+
+
+        var k= {a:123,b:"yyy",c:[1,2,3,]} ;
+        document.write("<br>");
+        document.write(typeof  k);   //  =>  object
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

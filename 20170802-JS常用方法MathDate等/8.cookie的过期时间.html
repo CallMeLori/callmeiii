@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>cookie的过期时间</p>
+<script>
+    //设置过期时间cookie
+    function setCookie(key,value,day){
+      var date = new Date();
+      date.setTime(date.getTime() + (day)*24*60*60*1000);
+
+      document.cookie = key +'='+value+';expires='+ date.toGMTString() ;  //格林时间格式
+
+    }
+
+    setCookie('abc','abc',1);
+    setCookie('ddd','ddd',3);
+
+</script>
+
+</body>
+</html>

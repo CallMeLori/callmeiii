@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var text = "";
+        function infor (){
+            try{
+                showinf();
+            }catch (err){
+//                text = "本页有一个错误";
+                text +="错误描述："+err.infor +"\n\n";
+                text +="点击确定继续。\n\n";
+                alert(err);
+                throw  new  Error("未定义");
+
+            }
+
+
+        }
+        infor();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

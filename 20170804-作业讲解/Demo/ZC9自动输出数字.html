@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--9、封装一个方法，实现每秒自动输出1到10之间的数，并在输出10之后自动停止执行。-->
+    <script>
+             var n;
+             function num(){
+                 m =  setInterval(function(){
+
+             n = Math.ceil(Math.random()*10);
+
+                if(n==10){
+                clearInterval(m);
+                }
+                else {
+                     document.write(n+"&nbsp;");
+                }
+             },1000);
+             }
+             num();
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

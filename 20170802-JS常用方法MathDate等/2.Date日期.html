@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //创建日期
+    var date = new Date(); //实例化|新建
+    document.write(date+"<br>");
+    //返回年份
+    document.write('年份'+date.getFullYear() +"<br>");
+    document.write('月份'+(date.getMonth()+1) +"<br>");
+    document.write('日'+date.getDate() +"<br>");
+    document.write('时'+date.getHours() +"<br>");
+    document.write('分'+date.getMinutes() +"<br>");
+    document.write('秒'+date.getSeconds() +"<br>");
+
+    //设置
+    var date2 = new Date('2016/12/12');
+    date2.setMonth(7);
+    document.write(date2+"<br>");
+
+</script>
+
+</body>
+</html>

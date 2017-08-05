@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 250px;
+            height: 250px;
+            background-color: red;
+            float: left;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<input type="button" value="变色" id="btn">
+<br>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+<script>
+var btn = document.getElementById("btn");
+var divs = document.getElementsByTagName("div");
+
+    btn.onclick = function () {
+    for(var a=1;a <= divs.length;a++){
+
+            if (a % 2 == 1) {
+                divs[a-1].style.backgroundColor = "blue";
+
+            }
+            else {
+                divs[a-1].style.backgroundColor = "green";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

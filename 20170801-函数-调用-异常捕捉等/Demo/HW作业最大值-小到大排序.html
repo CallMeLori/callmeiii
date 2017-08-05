@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--1、封装一个方法，取下面数组的最大值-->
+    <!--var nums = [2,10,13,8,15,9,4,6,19,11];-->
+
+    <!--2、封装一个方法，对下面数组进行从小到大的顺序排序-->
+    <!--var nums = [2,10,13,8,15,9,4,6,19,11];-->
+
+    <script>
+        var nums = [2,10,13,8,15,9,4,6,19,11];
+        function fn(){
+            var max = 0;
+            for(var i=0;i<nums.length;i++){
+                if (nums[i]>max){
+                    max = nums[i];
+                }
+            }
+            document.write(max);
+            return max;
+        }
+        fn();
+
+        document.write("<hr>");
+
+        nums.sort(function(a,b){
+            return a-b;
+        })
+        document.write(nums);
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

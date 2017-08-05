@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="a" id="a1">
+<input type="button" value="b" id="a2">
+<input type="button" value="c" id="a3">
+<input type="checkbox" class="box">
+<input type="checkbox" class="box">
+<input type="checkbox" class="box">
+<input type="checkbox" class="box">
+<input type="checkbox" class="box">
+
+<script>
+    var a1 = document.getElementById("a1");
+    var a2 = document.getElementById("a2");
+    var a3 = document.getElementById("a3");
+
+    var box = document.getElementsByClassName("box");
+    a1.onclick = function(){
+        for(var i=0;i<box.length;i++){
+            box[i].checked=true;
+        }
+    }
+
+    a2.onclick = function(){
+        for(var i=0;i<box.length;i++){
+            box[i].checked=false;
+        }
+    }
+    a3.onclick = function(){
+        for(var i=0;i<box.length;i++){
+
+            if (box[i].checked==true){
+                box[i].checked=false;
+            }else {
+                box[i].checked=true;
+            }
+        }
+    }
+</script>
+</body>
+</html>

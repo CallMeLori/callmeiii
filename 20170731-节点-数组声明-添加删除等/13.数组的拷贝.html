@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //为什么要拷贝
+    var list1 = [1,2,3];
+
+    //第一种，拷贝（克隆）数组 ， slice(0)
+    var list2 = list1.slice(0);
+    document.write(list1+'<br>')
+    document.write(list2+'<br>')
+    document.write('<hr>')
+    list1.push(4,5,6);
+    document.write(list1+'<br>')
+    document.write(list2+'<br>')
+    document.write('<hr>')
+
+    //第二种，concat
+    var list3 = list1.concat();
+    document.write(list1+'<br>')
+    document.write(list3+'<br>')
+    document.write('<hr>')
+
+    list1.splice(2,4);
+    document.write(list1+'<br>')
+    document.write(list3+'<br>')
+    document.write('<hr>')
+
+
+
+
+</script>
+
+</body>
+</html>

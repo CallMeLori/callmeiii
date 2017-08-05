@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--1、通过“红色，绿色，蓝色”按钮改变页面背景的颜色-->
+
+    <!--2、通过“变色”按钮，实现把所有奇数的div背景，改成蓝色-->
+
+    <!--3、通过“全选，不选，反选”实现checkbox框的选择和反选-->
+    <style>
+        #box{
+            width: 500px;
+            height: 500px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="红色" id="btn1">
+<input type="button" value="绿色" id="btn2">
+<input type="button" value="蓝色" id="btn3">
+<div id="box"></div>
+
+<script>
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+    var btn3 = document.getElementById("btn3");
+
+    btn1.onclick = function(){
+        box.style.cssText = "background:red;";
+    }
+    btn2.onclick = function(){
+        box.style.backgroundColor="green";
+    }
+
+    btn3.onclick  = function(){
+        box.style.backgroundColor="blue";
+    }
+</script>
+
+</body>
+</html>

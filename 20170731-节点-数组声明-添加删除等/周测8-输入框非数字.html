@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+数字框：<input type="text" id="box">
+
+<script>
+    var box = document.getElementById('box');
+    /*
+    box.onkeydown = function(event){
+      var val = box.value ;
+
+      if (isNaN(val)){
+        alert('请输入一个数字')
+      }
+
+
+      if ( val !='' &&  val != val*1){
+         alert('请输入一个数字')
+      }
+
+      //转换字符为数字 Number(string)
+
+
+         if (  isNaN( Number(val)) ){
+            alert('请输入一个数字')
+         }
+    }*/
+    box.addEventListener('keydown',function(event){
+      if (  isNaN( Number(this.value)) ){
+        alert('请输入一个数字')
+      }
+    })
+
+</script>
+
+
+</body>
+</html>

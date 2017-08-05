@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            width:100px;
+            height:30px;
+            border:solid 1px black;
+        }
+    </style>
+</head>
+<body>
+<p>获取搜索值</p>
+<table>
+    <tr>
+        <td>名字：</td>
+        <td id="myname"></td>
+    </tr>
+    <tr>
+        <td>导演：</td>
+        <td id="mydirector"></td>
+    </tr>
+</table>
+<!--转换  解码-->
+<script>
+    var searchValue = location.search;
+    //"?name=%E6%88%98%E7%8B%BC&director=%E5%90%B4%E4%BA%AC"
+    //替换掉问号
+    var newValue = searchValue.replace('?','');
+
+    //拆分成大数组
+    var seaArray = newValue.split('&');
+    //对名称组进行拆分
+    console.log(seaArray);
+    var nameArray = seaArray[0].split('=');
+    //对导演组进行拆分
+    var dirArray = seaArray[1].split('=');
+
+//    赋值
+    var myname =document.getElementById("myname");
+    myname.innerText = decodeURIComponent(nameArray[1]);
+
+    var mydirector = document.getElementById("mydirector");
+    mydirector.innerText = decodeURIComponent(dirArray[1]);
+</script>
+
+</body>
+</html>

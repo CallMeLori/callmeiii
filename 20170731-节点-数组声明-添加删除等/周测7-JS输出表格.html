@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            padding: 10px;
+            width:60px;
+            border:solid 1px black;
+        }
+        .blue{
+            background: blue;
+        }
+        .red {
+            background: red;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<script>
+    //行
+    var rows = 10;
+    //列
+    var cols = 5 ;
+
+    document.write('<table>');
+        for (var i = 0 ;i<rows; i++){
+            if (i % 2 == 0){
+              document.write('<tr class="blue"><td></td><td></td><td></td><td></td><td></td></tr>')
+            } else {
+              document.write('<tr class="red"><td></td><td></td><td></td><td></td><td></td></tr>')
+            }
+
+
+        }
+
+    document.write('</table>');
+
+
+</script>
+
+</body>
+</html>

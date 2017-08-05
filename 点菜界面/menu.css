@@ -1,0 +1,917 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+}
+/*登录-默认 begin*/
+.login{
+    width: 750px;
+    height: 1334px;
+    border: solid 1px black;
+    background-color: #FAFAFA;
+    position: relative;
+    z-index: 1;
+}
+.login .title{
+    width: 750px;
+    height: 100px;
+    /*border: solid 1px black;*/
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+.login .title span{
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-size: 47px;
+}
+
+.login .box1{
+    width: 750px;
+    height: 240px;
+    /*border: solid 1px black;*/
+    padding-top: 30px;
+}
+.login .box1 .text{
+    width: 710px;
+    height: 87px;
+    border: solid 3px #DDDDDD;
+    border-radius: 13px;
+    margin: 20px auto;
+}
+.login .box1 .text span{
+    padding-left: 20px;
+    line-height: 85px;
+    font-size: 40px;
+    color: #4F5257;
+}
+
+.login .box1 .text input{
+    border: 0;
+    outline: none;
+    font-size: 40px;
+    padding-left: 20px;
+    font-family: "华文宋体";
+    background-color: #FAFAFA;
+}
+
+.login .box2{
+    width: 750px;
+    height: 110px;
+    /*border: solid 1px black;*/
+    padding-top: 10px;
+}
+.login .box2 span{
+    font-size: 40px;
+    padding-left: 20px;
+    line-height: 85px;
+    color: #4F5257;
+}
+.login .box2 .box21{
+    width: 129px;
+    height: 60px;
+    border-radius: 35px;
+    border: solid 1px #C0C0C0;
+    background-color: #C0C0C0;
+    float: right;
+    margin: 20px;
+}
+.login .loginBtn{
+    width: 715px;
+    height: 80px;
+    /*border: solid 1px black;*/
+    border-radius: 10px;
+    padding-top: 10px;
+    font-size: 50px;
+    background-color: #39B868;
+    color: white;
+    /*font-weight: bold;*/
+    text-align: center;
+    margin: 20px auto;
+}
+
+/*输入账号有误  && 未输入提示begin*/
+.login .wrong{
+    width: 500px;
+    height: 110px;
+    border: solid 1px #333333;
+    background-color: #333333;
+    border-radius: 10px;
+    font-size: 31px;
+    text-align: center;
+    margin: 50px auto;
+    line-height: 110px;
+}
+.login .wrong span{
+    color: white;
+}
+
+/*输入账号有误 && 未输入提示 end*/
+
+/*登录-默认 end*/
+
+/*餐台begin*/
+.dinTable{
+    width: 750px;
+    height: 1334px;
+    border: solid 1px black;
+    background-color: #FAFAFA;
+}
+.dinTable .title{
+    width: 750px;
+    height: 100px;
+    /*border: solid 1px black;*/
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+.dinTable .title p{
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-size: 42px;
+}
+.dinTable .title p span{
+    color: white;
+    line-height: 100px;
+    font-size: 42px;
+    float: left;
+    text-indent: 10px;
+}
+.dinTable .tableNum{
+    width: 750px;
+    height: 150px;
+    border: solid 1px #666666;
+    background-color: #666666;
+}
+.dinTable .tableNum li{
+    list-style-type: none;
+    float: left;
+    color: white;
+    padding: 56px 84px 48px 96px;
+}
+.dinTable .tableNum li:hover{
+    background-color: #999999;
+}
+.dinTable .tableNum li a{
+    color: white;
+    text-decoration: none;
+    font-size: 35px;
+    text-align: center;
+}
+
+.dinTable .sumTable{
+    width: 668px;
+    height: 175px;
+    /* border: solid 1px black; */
+    margin: 10px 0px -5px 40px;
+}
+.dinTable .sumTable .dTable{
+    width: 195px;
+    height: 160px;
+    border: solid 1px gray;
+    border-radius: 10px;
+    background-color: #E1E1E1;
+    float: left;
+    margin: 10px 10px 10px 13px;
+}
+.dinTable .sumTable .dTable:hover{
+    background-color: #DEE1FF;
+}
+.dinTable .sumTable .dTable .priceT{
+    color:#D4001B;
+    font-size: 30px;
+
+}
+.dinTable .sumTable .dTable .positionT{
+    color: #4F5257;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 78px;
+
+}
+.dinTable .sumTable .dTable .timeT{
+    color: #666262;
+    font-size: 30px;
+
+}
+/*餐台end*/
+
+/*客人信息begin*/
+.dinTable .box1{
+    width: 750px;
+    height: 240px;
+    /*border: solid 1px black;*/
+    padding-top: 30px;
+}
+.dinTable .box1 .text{
+    width: 710px;
+    height: 87px;
+    border: solid 3px #DDDDDD;
+    border-radius: 13px;
+    margin: 20px auto;
+}
+.dinTable .box1 .text span{
+    padding-left: 20px;
+    line-height: 85px;
+    font-size: 40px;
+    color: #4F5257;
+}
+
+.dinTable .box1 .text input{
+    border: 0;
+    outline: none;
+    font-size: 40px;
+    padding-left: 20px;
+    font-family: "华文宋体";
+    background-color: #FAFAFA;
+}
+.dinTable .loginBtn{
+    width: 715px;
+    height: 80px;
+    /*border: solid 1px black;*/
+    border-radius: 10px;
+    padding-top: 10px;
+    font-size: 50px;
+    background-color: #39B868;
+    color: white;
+    text-align: center;
+    margin: 140px auto;
+}
+
+/*客人信息end*/
+
+/*菜谱begin*/
+.cookBook{
+    width: 750px;
+    height: 1334px;
+    border: solid 1px black;
+    background-color: #FAFAFA;
+    position: relative;
+    z-index: 1;
+}
+.cookBook .title{
+    width: 750px;
+    height: 100px;
+    /*border: solid 1px black;*/
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+.cookBook .title p{
+    color: white;
+    line-height: 100px;
+    font-size: 42px;
+    display: inline-block;
+    width: 555px;
+    height: 95px;
+    float: left;
+    /*border: solid 1px red;*/
+    text-indent: 107px;
+}
+.cookBook .title p span{
+    color: white;
+    line-height: 100px;
+    font-size: 42px;
+    float: left;
+    text-indent: 10px;
+}
+.cookBook .title .myCoBook{
+    width: 170px;
+    height: 70px;
+    /*border: solid 1px black;*/
+    border-radius: 12px;
+    float: right;
+    background-color: #39B868;
+    margin-top: 13px;
+    margin-right: 20px;
+
+}
+.cookBook .title .myCoBook span{
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    line-height: 68px;
+}
+
+.cookBook .leftSub{
+    width: 150px;
+    height: 1100px;
+    /*border: solid 1px black;*/
+    background-color: #E8E8EA;
+    float: left;
+    /*position: relative;*/
+}
+.cookBook .leftSub li{
+    list-style-type: none;
+    font-size: 37px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    padding-left: 36px;
+    /*border: 1px solid;*/
+    position: relative;
+}
+.cookBook .leftSub li a{
+    text-decoration: none;
+    font-size: 37px;
+    color: black;
+}
+.cookBook .leftSub li span{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: right;
+    background-color: #FFA13D;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 3px;
+    left: 91px;
+}
+.cookBook .leftSub li:hover{
+    background-color: #AFAFB0;
+    color: white;
+}
+.cookBook .leftSub li a:hover{
+    color: white;
+}
+.cookBook .food{
+    width: 570px;
+    height: 176px;
+    border-bottom: solid 1px #DDDDDD;
+    float: right;
+    margin-right: 14px;
+    position: relative;
+    z-index: 2;
+}
+.cookBook .food img{
+    border-radius: 10px;
+    width: 180px;
+    height: 130px;
+    float: left;
+    margin-top: 22px;
+}
+.cookBook .food .foodCont{
+    width: 140px;
+    height: 160px;
+    /*border: 1px solid black;*/
+    float: left;
+
+}
+.cookBook .food .foodCont p{
+    font-size: 31px;
+    padding-top: 21px;
+    font-weight: bold;
+    color: #4F5257;
+    text-indent: 15px;
+}
+.cookBook .food .foodCont .orPrice{
+    text-decoration: line-through;
+    color: #4F5257;
+    text-indent: 15px;
+    display: block;
+}
+.cookBook .food .foodCont span{
+    font-size: 27px;
+    color: #D1001B;
+    text-indent: 15px;
+    display: block;
+}
+.cookBook .food .circle{
+    width: 60px;
+    height: 60px;
+    border: solid 4px #AFAFB0;
+    border-radius: 50%;
+    float: right;
+    margin-top: 55px;
+    margin-right: 10px;
+}
+.cookBook .btn{
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+    float: right;
+    background: #39B868;
+    text-align: center;
+    position: absolute;
+    top: 1200px;
+    right: 20px;
+}
+.cookBook .btn span{
+    color: white;
+    font-size: 42px;
+    line-height: 72px;
+}
+/*菜谱end*/
+
+/*菜谱加载提示begin*/
+.cookBook .message{
+    width: 455px;
+    height: 110px;
+    border: solid 1px #333333;
+    background-color: #333333;
+    border-radius: 10px;
+    font-size: 31px;
+    text-align: center;
+    margin: 50px auto;
+    line-height: 110px;
+    position: relative;
+    z-index: 10;
+    float: right;
+    bottom: 205px;
+    right: 122px;
+}
+.cookBook .message span{
+    color: white;
+}
+/*菜谱加载提示end*/
+
+/*酒水begin*/
+.cookBook .food .wine{
+    border-radius: 10px;
+    width: 130px;
+    height: 150px;
+    float: left;
+    margin-top: 0;
+}
+.cookBook .food .wineNum{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    background-color: #FFA13D;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 57px;
+    color: white;
+}
+.cookBook .food .wineAdd{
+    width: 206px;
+    height: 60px;
+    /*border: 1px solid black;*/
+    float: right;
+    text-align: center;
+    margin-top: 58px;
+}
+.cookBook .food .wineAdd p{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #E1E3E4;
+    color: #8D8D8D;
+    float: left;
+    line-height: 40px;
+    font-size: 63px;
+    margin-left: 45px;
+}
+/*酒水end*/
+
+/*计算器begin*/
+.cal{
+    width: 750px;
+    height: 1334px;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.cal table{
+    border: 1px;
+    z-index: 20;
+    text-align: center;
+    margin: 283px auto;
+}
+.cal td{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: #39B868;
+    font-size: 60px;
+    color: white;
+}
+.cal td:hover{
+    background-color: #189747;
+}
+/*计算器end*/
+
+/*对应餐台begin*/
+.dinTable .tTotal{
+    width: 750px;
+    height: 156px;
+    background-color: #666666;
+    text-align: right;
+    float: left;
+    margin-bottom: 15px;
+
+}
+.dinTable .tTotal p{
+    font-size: 40px;
+    color: white;
+    padding-top: 40px;
+}
+.dinTable .tTotal span{
+    color: #D1001B;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.dinTable .tfood{
+    width: 710px;
+    border-bottom: solid 1px #DDDDDD;
+    background-color: white;
+    margin: 0 auto;
+    float: left;
+    margin-left: 17px;
+}
+
+.dinTable .tfood .tfoodCont{
+    width: 177px;
+    padding-bottom: 12px;
+    /*border: 1px solid black;*/
+    float: left;
+
+}
+.dinTable .tfood .tfoodCont p{
+    font-size: 31px;
+    padding-top: 21px;
+    font-weight: bold;
+    color: #4F5257;
+    text-indent: 15px;
+}
+.dinTable .tfood .tfoodCont .orPrice{
+    text-decoration: line-through;
+    color: #4F5257;
+    text-indent: 15px;
+    display: block;
+}
+.dinTable .tfood .tfoodCont span{
+    font-size: 27px;
+    color: #D1001B;
+    text-indent: 15px;
+    display: block;
+}
+.dinTable .tfood .tAdd{
+    width: 206px;
+    height: 60px;
+    /*border: 1px solid black;*/
+    float: right;
+    text-align: center;
+    margin-top: 30px;
+}
+.dinTable .tfood .tAdd p{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #E1E3E4;
+    color: #8D8D8D;
+    float: left;
+    line-height: 40px;
+    font-size: 63px;
+    margin-left: 45px;
+}
+
+.dinTable .tfood .tCircle{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    float: left;
+    background-color: #FFA13D;
+    font-size: 33px;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 32px;
+    left: 140px;
+}
+.dinTable .tfood .tAlready{
+    display: inline-block;
+    float: left;
+    font-size: 30px;
+    position: relative;
+    top: 30px;
+    left: 163px;
+}
+.dinTable .btn{
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+    float: right;
+    background: #39B868;
+    text-align: center;
+    position: relative;
+    top: 200px;
+    right: 30px;
+}
+.dinTable .btn span{
+    color: white;
+    font-size: 40px;
+    line-height: 73px;
+}
+/*对应餐台end*/
+
+/*4.5按钮begin*/
+
+.cal .gray td:hover{
+    background-color: #AAAAAA;
+}
+/*4.5按钮end*/
+
+/*5.3菜品备注begin*/
+.dinTable .remark{
+    width: 700px;
+    height: 860px;
+    border: 2px solid #EDEDED;
+    border-radius: 5px;
+    margin: 18px auto;
+}
+.dinTable .remark p{
+    font-size: 35px;
+    font-weight: bold;
+    border-bottom: 1px solid #EDEDED;
+    line-height: 55px;
+    text-indent: 20px;
+    color: #50545B;
+}
+.dinTable .remark p span {
+    float: right;
+    padding-right: 20px;
+}
+.dinTable .remark li{
+    list-style-type: none;
+    border-bottom: 1px solid #EDEDED;
+    font-size: 35px;
+    line-height: 79px;
+    text-indent: 20px;
+    color: #565A60;
+}
+.dinTable .remark li input{
+    display: none;
+}
+.dinTable .remark .check1 + label{
+    background-color: white;
+    border: 2px solid #E1E1E1;
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    margin-top: 20px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    /*box-shadow: h-shadow v-shadow blur spread color inset;*/
+}
+.dinTable .remark .check1:checked + label{
+    border: solid 2px #39B868;
+    color: #39B868;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+.dinTable .remark .check1:checked + label:after{
+    content: "\2714";
+    position: relative;
+    bottom: 37px;
+    right: 13px;
+    color: #39B868;
+    width: 100%;
+    text-align: center;
+    vertical-align: text-top;
+}
+.dinTable .dMessage{
+    width: 700px;
+    height: 200px;
+    border: 2px solid #EDEDED;
+    border-radius: 5px;
+    margin: 18px auto;
+    font-size: 35px;
+    line-height: 79px;
+    text-indent: 20px;
+    color: #565A60;
+}
+.dinTable .dMessage textarea{
+    width: 659px;
+    height: 100px;
+    margin-left: 21px;
+    margin-top: 3px;
+    border: 2px solid #EDEDED;
+    background-color: white;
+}
+.dinTable .OKBtn{
+    width: 715px;
+    height: 80px;
+    /*border: solid 1px black;*/
+    border-radius: 10px;
+    padding-top: 10px;
+    font-size: 50px;
+    background-color: #39B868;
+    color: white;
+    /*font-weight: bold;*/
+    text-align: center;
+    margin: 20px auto;
+}
+/*5.3菜品备注end*/
+
+/*6.0我的菜单begin*/
+.dinTable .menuTotal{
+    width: 750px;
+    height: 156px;
+    background-color: #666666;
+    text-align: right;
+    float: left;
+    margin-bottom: 15px;
+}
+.dinTable .menuTotal span{
+    color: white;
+    font-size: 34px;
+    float: left;
+    line-height: 150px;
+    padding-left: 85px;
+}
+.dinTable .menuTotal input{
+    width: 175px;
+    height: 78px;
+    border-radius: 15px;
+    font-size: 34px;
+    background-color: #39B868;
+    color: white;
+    text-align: center;
+    float: right;
+    margin-top: 36px;
+    margin-right: 19px;
+}
+
+.dinTable .myMenu{
+    width: 700px;
+    /*height: 130px;*/
+    border: 1px solid #DDDDDD;
+    border-radius: 20px;
+    margin: 10px 24px;
+    float: left;
+    background-color: white;
+}
+.dinTable .myMenu .myCook{
+    width: 260px;
+    /*height: 105px;*/
+    /*border: 1px solid black;*/
+    float: left;
+    line-height: 45px;
+    padding-top: 16px;
+    padding-bottom: 10px;
+
+}
+.dinTable .myMenu .myCook .name{
+    font-size: 35px;
+    font-weight: bold;
+    color: #4F5257;
+}
+.dinTable .myMenu .myCook .originalPrice{
+    text-decoration: line-through;
+    color: #4F5257;
+    font-size: 30px;
+
+}
+.dinTable .myMenu .myCook .price{
+    font-size: 30px;
+    color: #D1001B;
+
+}
+
+.dinTable .myMenu .myTime{
+    width: 250px;
+    height: 105px;
+    /*border: 1px solid black;*/
+    float: left;
+    line-height: 45px;
+    padding-top: 16px;
+}
+.dinTable .myMenu .myTime .time{
+    font-size: 30px;
+    color: #9999A5;
+}
+.dinTable .myMenu .myAlready{
+    width: 178px;
+    height: 105px;
+    /*border: 1px solid black;*/
+    float: left;
+    line-height: 45px;
+    padding-top: 16px;
+}
+.dinTable .myMenu .myAlready .cookBtn{
+    width: 175px;
+    height: 55px;
+    border-radius: 25px;
+    background-color: #FFA13D;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+    margin-top: 15px;
+}
+
+.dinTable .remark{
+    width: 694px;
+    height: 130px;
+    border-radius: 5px;
+    margin: 35px 24px;
+    float: left;
+    background-color: #EEEEEE;
+}
+.dinTable .remark .re1,.re2{
+    display: inline-block;
+    float: left;
+    color: #777777;
+    font-size: 30px;
+    padding-top: 27px;
+}
+.dinTable .infoMessage{
+    width: 280px;
+    height: 75px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    background-color: #666666;
+    float: left;
+    line-height: 72px;
+    margin-top: 202px;
+    margin-left: 190px;
+}
+.dinTable .btn{
+    width: 180px;
+    height: 78px;
+    /* border: solid 1px black; */
+    border-radius: 10px;
+    padding-top: 3px;
+    font-size: 30px;
+    background-color: #39B868;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*6.0我的菜单end*/
+
+/*7.2结账begin*/
+.dinTable .boxTotal{
+    padding-top: 30px;
+}
+.dinTable .boxTotal .text{
+    width: 710px;
+    height: 87px;
+    border: solid 3px #DDDDDD;
+    margin: -4px auto;
+}
+.dinTable .boxTotal .text span{
+    padding-left: 20px;
+    line-height: 84px;
+    font-size: 34px;
+    color: #4F5257;
+}
+
+.dinTable .boxTotal .text input{
+    border: 0;
+    outline: none;
+    font-size: 34px;
+    padding-left: 20px;
+    font-family: "华文宋体";
+    background-color: #FAFAFA;
+}
+.dinTable .boxTotal2 .text{
+    width: 710px;
+    height: 82px;
+    border: solid 3px #DDDDDD;
+    border-radius: 13px;
+    margin: 20px auto;
+}
+.dinTable .boxTotal2 .text span{
+    padding-left: 20px;
+    line-height: 85px;
+    font-size: 34px;
+    color: #4F5257;
+}
+
+.dinTable .boxTotal2 .text input{
+    border: 0;
+    outline: none;
+    font-size: 34px;
+    padding-left: 20px;
+    font-family: "华文宋体";
+    background-color: #FAFAFA;
+}
+.dinTable .totalBtn{
+    width: 715px;
+    height: 80px;
+    /*border: solid 1px black;*/
+    border-radius: 10px;
+    padding-top: 10px;
+    font-size: 50px;
+    background-color: #39B868;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+/*7.2结账end*/

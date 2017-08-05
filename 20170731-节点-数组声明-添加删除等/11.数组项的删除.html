@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //数组项的添加
+    var lists = [4,5,6];
+    //1.从数组的起始添加数组项 unshift(添加到最前面)
+    lists.unshift(3);
+    document.write(lists);
+    document.write("<hr>");
+    //2.从数组的末尾添加数组项 push(添加到最后面)
+    lists.push(7);
+    document.write(lists);
+    document.write("<hr>");
+
+    //3.添加到数组的任何位置   splice(插入位置，0， 数组项)   注意 0的作用
+    lists.splice(2,0,8,9);
+    document.write(lists);
+    document.write("<hr>");
+
+
+
+
+</script>
+
+</body>
+</html>

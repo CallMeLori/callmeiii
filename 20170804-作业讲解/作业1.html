@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<p>打开一个页面page.html，并带上查询参数
+    name=战狼   和    director=吴京
+    并在page.html获取此两参数的值</p>
+
+<p><input type="button" value="打开页面" onclick="myopen()"></p>
+
+<script>
+    function myopen(){
+      var name = encodeURIComponent('战狼');
+      var director = encodeURIComponent('吴京');
+      window.open('page.html?name='+name+'&director='+ director ,'_blank');
+
+    }
+
+</script>
+
+
+
+</body>
+</html>

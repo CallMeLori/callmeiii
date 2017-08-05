@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //比较运算
+        var x = 2 ;
+        var y = 2 ;
+
+        var z = x==y;
+        document.write(z)  //true
+
+        var a = 0 ;
+        var b = '' ;
+        var c = a==b;    //二个等号表示非全等
+        var d = a===b;   //三个等号表示全等 （数据和类型都相等）
+        document.write("<hr>")
+        document.write(c)  //true
+        document.write("<br>")
+        document.write(d)  //false
+
+        //不相等的比较
+        document.write("<hr>")
+        var h = x != y ;
+        document.write(h)    //false
+
+        //不相等的比较
+        document.write("<hr>")
+        var h = a != b ;
+        document.write(h)    //false
+
+        document.write("<hr>")
+        var h = a !== b ;
+        document.write(h)    //true
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

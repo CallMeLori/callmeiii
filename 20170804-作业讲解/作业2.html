@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            position: relative;
+            top:100px;
+            left:100px;
+            width:200px;
+            height:200px;
+            border:solid 5px blue;
+        }
+        div:after{
+
+        }
+
+        a:hover{
+
+        }
+
+    </style>
+</head>
+<body>
+<p>封装一个方法 getStyleValue，获取某样式的值</p>
+
+<div id="box" style="left:80px;" >对此div取样式值</div>
+
+<script>
+    //取box对象
+    var box = document.getElementById('box');
+    /*
+    //下面的方法只能获取行内样式
+    var left = box.style.left;
+    alert(left);
+    //获取非行内样式
+     */
+
+    //var mystyle = window.getComputedStyle(box,false);
+
+    //alert(mystyle.left)
+
+     //不适用ie8或以下
+  /*  function getStyleValue(obj,key){
+      var mystyle = window.getComputedStyle(box,false);
+      return mystyle[key];
+    }
+
+    alert(getStyleValue(box,"width"))
+    alert(getStyleValue(box,"top"))
+*/
+
+    //兼容ie8或以下
+    function getStyleValue(obj,key){
+      var mystyle;
+      if (obj.currentStyle){
+        //ie8
+        mystyle = obj.currentStyle;
+      } else {
+        mystyle = window.getComputedStyle(box,false);
+      }
+      return mystyle[key];
+    }
+
+    alert(getStyleValue(box,"width"))
+    alert(getStyleValue(box,"top"))
+
+
+</script>
+
+
+</body>
+</html>

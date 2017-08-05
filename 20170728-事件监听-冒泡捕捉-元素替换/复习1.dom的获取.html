@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border:solid 5px red;
+            margin:10px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="box" name="dv" class="boxcss" ><b>中国</b></div>
+<div id="box3" name="dv" class="boxcss" ><b>美国</b></div>
+<div id="box4" name="dv" class="boxcss" ><b>德国</b></div>
+<div id="box5" name="dv" class="boxcss" ><b>意大利</b></div>
+
+<script>
+    //通过id获取节点 对象
+    var box = document.getElementById('box')
+    var content = box.innerText ;   //获取对象的内容
+    document.write(content +'<hr>')
+    var content2 = box.innerHTML ;   //获取对象的内容
+    document.write(content2 +'<hr>')
+    //2.通过类名获取节点 对象
+    var box3 = document.getElementsByClassName('boxcss')[1];
+    var content3 = box3.innerText ;   //获取对象的内容
+    document.write(content3 +'<hr>')
+
+    //3.通过标签名获取节点对象
+    var box4 = document.getElementsByTagName('div');    //tag就是标签
+    var content4 = box4[2].innerText;
+    document.write(content4 +'<hr>')
+
+    //4。通过元素的name取节点对象
+    var box5 = document.getElementsByName('dv');
+    var content5 = box5[3].innerText;
+    document.write(content5 +'<hr>')
+
+
+</script>
+
+
+
+</body>
+</html>

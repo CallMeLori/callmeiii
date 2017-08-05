@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="qx" type="button" value="全选" >
+<input id="qbqx" type="button" value="全部取消">
+<input id="fx" type="button" value="反选">
+<div id="main">
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+    <input type="checkbox" name="box" id="">
+    <br>
+</div>
+
+<script>
+    var qx= document.getElementById('qx'),
+        qbqx = document.getElementById('qbqx'),
+        fx   = document.getElementById('fx') ;
+    var checkboxes = document.getElementsByName('box');
+    var div  = document.getElementById('main');
+
+
+    qx.addEventListener('click',function(){
+      //全选
+      for (var i = 0 ; i < checkboxes.length ; i++ ){
+        checkboxes[i].checked = true ;
+      }
+    });
+
+    qbqx.onclick = function(){
+      //取消全选
+      for(var i = 0 ; i< checkboxes.length; i++){
+        checkboxes[i].checked = false;
+      }
+    }
+
+    fx.onclick = function(){
+      for( var i = 0 ; i< checkboxes.length;i++ ){
+        /*
+        if (checkboxes[i].checked ){
+          checkboxes[i].checked= false;
+        } else {
+          checkboxes[i].checked = true;
+        }*/
+        checkboxes[i].checked = !checkboxes[i].checked;
+
+      }
+    }
+
+
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

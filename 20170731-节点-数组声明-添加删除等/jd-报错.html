@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      "use strict";
+      pi = 3.14;       // 报错 (pi 未定义)
+    </script>
+
+</head>
+<body>
+
+<table>
+    <tr>
+        <td id="myid" name="myname">aaa</td>
+    </tr>
+</table>
+
+<script>
+    var td = document.getElementById('myid');
+    alert(td.nodeName)
+    alert(td.nodeType)
+    alert(td.nodeValue)
+
+    var sx = td.getAttributeNode('name')
+    alert(sx.nodeName)
+    alert(sx.nodeType)
+    alert(sx.nodeValue)
+
+    var txt = td.firstChild;
+    alert(txt.nodeName)
+    alert(txt.nodeType)
+    alert(txt.nodeValue)
+
+
+
+</script>
+
+
+</body>
+</html>

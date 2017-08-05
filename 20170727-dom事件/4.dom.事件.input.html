@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="p1"></p>
+姓名：<input type="text" id="input" name="inp">
+
+      <input type="button" value="确定">
+
+<script>
+    var input = document.getElementsByName('inp')[0];
+        //获得焦点
+        input.onfocus = function(){
+//            alert('现在可以输入了')
+        }
+        //失去焦点
+        input.onblur = function(){
+//            alert('你不可输入了')
+        }
+        //文字改变
+        input.onchange = function(){
+//          alert('文本改变了')
+        }
+        //接受键盘事件
+        input.onkeydown = function(){
+            var p1 = document.getElementById('p1');
+            p1.innerText = this.value;
+        }
+        input.onkeyup = function(){
+          var p1 = document.getElementById('p1');
+          p1.innerText = this.value;
+        }
+
+
+
+</script>
+
+</body>
+</html>

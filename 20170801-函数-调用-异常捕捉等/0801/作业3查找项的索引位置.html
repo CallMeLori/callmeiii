@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr2 = ['a','b','c','d','e','e','b','f','a','f'];
+    //写一个方法（有两个参数，第一个参数是数组，第二个是数组里的一个项），实现查找项在数组的索引位置
+    function searchIndex(array,item){
+        for (var i = 0 ; i< array.length; i++ ){
+          if (array[i] == item ){
+            document.write(i +"<br>")
+          }
+        }
+    }
+    searchIndex(arr2,'d');
+
+
+</script>
+
+
+</body>
+</html>

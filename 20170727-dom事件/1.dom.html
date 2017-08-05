@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="dom1" name="dom" class="" title="这是标题1" >Hello,world!</div>
+<div id="dom2" name="dom2" class="" title="这是标题2" >Hello,world2!</div>
+
+<img id="img1" src="sc1.png" alt="你是不是把图片地址搞丢了" title="我是一张图片">
+
+<script>
+    //找到标签（元素）对象
+    var dom1 = document.getElementById('dom1');
+    //然后，才能修改元素对象的一些内容，特性等
+        dom1.innerText = '<font color=red>喂，你好！</font>'
+
+    var dom2 = document.getElementById('dom2');
+        dom2.innerHTML = "<font color=red>喂，<i>你好</i>，我是第二标签</font>";
+
+    //innerText 与 innerHTML的区别****
+
+
+    /*改变属性值 ,alt属性的作用 */
+    var img1 = document.getElementById('img1');
+        img1.src ="https://www.baidu.com/img/bd_logo1.png";
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--meta http-equiv="refresh"  content="5;url=http://www.sina.com.cn"   -->
+
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //封装一个保存cookie的方法
+    function setCookie(key,value,day){
+      var date = new Date();
+      date.setTime(date.getTime()+day*24*60*60*1000);
+      document.cookie = key+'='+value+';expires='+date.toGMTString();
+    }
+    //setCookie('id','iphone',10);
+
+
+    //获取cookie值（封装一个方法）
+    function getCookie(key){
+      var cookieValue = '';
+      //获取所有的cookie
+      var cookies = document.cookie;
+      //拆分所有的cookie
+      var cookieArray = cookies.split('; ');
+      for (var i =0 ; i< cookieArray.length; i++ ){
+        var currentCookie = cookieArray[i].split('=');
+        if (currentCookie[0] == key){
+          cookieValue =  currentCookie[1];
+          break;
+        }
+      }
+      return cookieValue;
+    }
+
+
+    //删除一个cookie值
+    function removeCookie(key){
+      setCookie(key,'',-1);
+    }
+
+//    var id = getCookie('id');
+//    var pwd = getCookie('password')
+//    alert(id);
+//    alert(pwd)
+
+
+
+</script>
+
+
+</body>
+</html>

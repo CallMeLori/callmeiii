@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 250px;
+            height: 250px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script>
+    var box = document.getElementById('box');
+
+    box.onmouseover =function(){
+        this.style.backgroundColor ="green";
+        this.style.width = "500px";
+        this.style.height ="500px";
+    }
+
+    box.onmouseout =function(){
+//        this.style.backgroundColor = "red";
+//        this.style.width ="250px";
+//        this.style.height ="250px";
+        this.style.cssText ="background-color:red; width:250px; height:250px;";
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

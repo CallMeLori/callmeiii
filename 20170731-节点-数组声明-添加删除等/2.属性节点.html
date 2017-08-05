@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td id="myid" name="myname">我是文本节点</td>
+    </tr>
+</table>
+
+<script>
+    var td = document.getElementById('myid');
+    //获取节点信息
+    //节点名称
+    alert(td.nodeName);    //=>td
+    //节点类型
+    alert(td.nodeType);    //=>1
+    //节点值
+    alert(td.nodeValue);   //=>null
+
+
+
+</script>
+
+</body>
+</html>

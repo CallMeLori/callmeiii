@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #tt{
+            overflow: scroll;
+        }
+        #tt2{
+            overflow: scroll;
+            word-break: keep-all;
+            word-wrap: normal;
+        }
+    </style>
+</head>
+<body>
+
+<textarea name="" id="tt" cols="30" rows="10"></textarea>
+<textarea name="" id="tt2" cols="30" rows="10">aaaaaaaaaaadddddddddddddddddddddgffffff</textarea>
+<script>
+    var tt = document.getElementById('tt');
+    document.write("<br>"+
+      'clientWidth:'+tt.clientWidth +"<br>"+
+      'scrollWidth:'+tt.scrollWidth +"<br>"+
+      'offsetWidth:'+tt.offsetWidth
+
+    )
+
+    document.write('<hr>');
+
+    var tt2 = document.getElementById('tt2');
+
+    document.write("<br>"+
+      'clientWidth:'+tt2.clientWidth +"<br>"+
+      'scrollWidth:'+tt2.scrollWidth +"<br>"+
+      'offsetWidth:'+tt2.offsetWidth
+
+    )
+
+</script>
+
+</body>
+</html>

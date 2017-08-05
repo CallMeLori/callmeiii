@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+ <!--2、封装一个方法，对下面数组进行从小到大的顺序排序-->
+<!--var nums = [2,10,13,8,15,9,4,6,19,11]; -->
+ <script>
+     var nums = [2,10,13,8,15,9,4,6,19,11];
+     function fn(){
+     for(var a =0;a<nums.length;a++){
+         for (var b =a+1;b<nums.length;b++){
+             if(nums[a]>nums[b]){
+                 var temp = 0;
+                 temp = nums[b];
+                 nums[b]=nums[a];
+                nums[a]= temp;
+
+             }
+         }
+     }
+         document.write(nums);
+         return nums;
+     }
+     fn();
+ </script>
+
+</body>
+</html>

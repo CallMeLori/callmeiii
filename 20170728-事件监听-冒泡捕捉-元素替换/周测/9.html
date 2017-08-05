@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--9、请写一个p元素里套p元素的事件捕捉的一个实例-->
+    <style>
+        #p1{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left:0px;
+            top:0px;
+
+          }
+        #p2{
+            width: 50px;
+            height: 50px;
+            background: blue;
+            position: absolute;
+            left:0px;
+            top:0px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="p1">p11111
+<div id="p2">p2</div>
+</div>
+
+<script>
+    var p1=document.getElementById("p1");
+    var p2=document.getElementById("p2");
+    p1.addEventListener("click",function(){
+        alert("这是P1");
+    },true)
+
+    p2.addEventListener("click",function(){
+        alert("这是P2");
+    },true)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var a = -123.45;
+    var abs = Math.abs(a) ;
+    //取绝值：把所有的数字变成正数
+    document.write(abs);
+    document.write("<hr>");
+
+    //取整
+    var b = 3.005 ;
+    var int1 = Math.ceil(b);  //往上取整
+    var int2 = Math.floor(b); //往下取整
+    document.write(int1);
+    document.write("<br>");
+    document.write(int2);
+    document.write("<hr>");
+
+    //取整（四舍五入）
+    var c = 3.4 ;
+    var d = 3.6 ;
+    var int3 = Math.round(c);
+    var int4 = Math.round(d);
+
+    document.write(int3);
+    document.write("<br>");
+    document.write(int4);
+    document.write("<hr>");
+
+    //取PI
+    var e = Math.PI ;
+    document.write(e);
+    document.write("<hr>");
+
+    //取最大值，最小值
+    var min = Math.min( 3,2,1,0,-1 );
+    var max = Math.max(3,2,1,0,-1 ) ;
+    document.write(min);
+    document.write("<br>");
+    document.write(max);
+    document.write("<hr>");
+
+    //随机数
+    var rand = Math.random();
+
+    document.write(rand +"<br>");
+
+    var rand2 = Math.ceil(Math.random()*10);
+
+    document.write(rand2);
+
+    document.write("<hr>");
+
+    //平方根、开方
+    var g = Math.sqrt(20);
+    var h = Math.pow(2.5,4);
+
+    document.write(g +"<br>");
+    document.write(h +"<hr>");
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

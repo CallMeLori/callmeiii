@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //一种 []
+    var team1 = ['王凯','陆世坚','刘浪龙','崖恒浩'];
+    //获取数级的长度（数组里包括几项）;
+    var length = team1.length ;
+    alert(length);    //=>4
+
+    //数组的索引（数组内部的项排在第几），数组的第一项为0
+
+    //获取数组项的值
+    var item1 = team1[0];   //数组[索引值]
+    alert(item1);
+    var item4 = team1[3];
+    alert(item4);
+
+    //通过循环，遍历所有的数组项
+    for(var i =0 ;i< team1.length ; i++){
+      document.write(team1[i] +'<br>');
+    }
+
+    document.write('<hr>')
+
+    //通过for in ，遍历所有的数组项
+    for (var m in team1){
+      document.write( team1[m] +'<br>');
+    }
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>location地址栏实例</p>
+
+<script>
+ document.write("<p>取整个地址</p>");
+ var href = location.href;
+ document.write("<p>"+href+"</p>");
+
+ //取域名端口
+ var host = location.host;
+ document.write("<p>取域名端口:"+host+"</p>");
+ //取路径
+ var path = location.pathname;
+ document.write("<p>取路径:"+path+"</p>");
+ //取？号后面的查询部分
+ var search = location.search;
+ document.write("<p>取查询参数:"+search+"</p>");
+ //取协议
+ var xy = location.protocol ;
+ document.write("<p>取协议:"+xy+"</p>");
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //数组项的删除
+    var lists = [3,4,5,6,7,8,9];
+
+    //1、从最前面删除数组项  //shift
+    lists.shift();
+    document.write(lists);
+    document.write("<hr>");
+
+    //2.从最后面删除数组项   //pop
+    lists.pop();
+    document.write(lists);
+    document.write("<hr>");
+
+    //3.删除数组的任何位置   splice(删除位置，大于0的数值)
+    lists.splice(1,3);
+    document.write(lists);
+    document.write("<hr>");
+
+</script>
+
+</body>
+</html>

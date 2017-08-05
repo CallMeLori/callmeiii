@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--1) var array1 = [“中国”,”美国“,”法国”,”俄罗斯”];-->
+    <!--遍历出所有项-->
+    <!--2) var score = [50,70,60,40,80,90];-->
+    <!--排序--><!--求最大值-->
+
+    <script>
+
+        var array1 = ["中国","美国","法国","俄罗斯"];
+        array1[0] | array1[3];
+        for ( var x in array1){
+           alert(array1[x]);
+        }
+
+        var score = [50,70,60,40,80,90];
+
+        score.sort();
+        document.write(score);
+        document.write("<br>");
+
+           var m =0;
+           for (var n in score){
+               if (score[n]>m){
+                   m=score[n];
+               }
+           }
+        document.write(m);
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

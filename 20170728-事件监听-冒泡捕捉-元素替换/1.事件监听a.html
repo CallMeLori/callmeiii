@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background: blue;
+            line-height: 200px;
+            text-align: center;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+<a id="link" href="http://www.baidu.com">你点我试试</a>
+
+
+
+<script>
+    var a = document.getElementById('link');
+    /*
+    a.onclick = function(event){
+      //阻止默认行为
+      event.preventDefault();
+      alert(1234)
+    } */
+    //e这个参数，就是事件对象
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+        alert(1234)
+    })
+
+
+
+
+</script>
+
+</body>
+</html>

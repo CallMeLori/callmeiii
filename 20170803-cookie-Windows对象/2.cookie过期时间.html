@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //保存带过期时间的cookie
+    var date = new Date();
+    //设置过期时间
+    date.setTime( date.getTime() + 5*24*60*60*1000 );
+
+    //保存cookie
+    document.cookie = 'password=1324;expires='+ date.toGMTString();
+
+
+</script>
+
+</body>
+</html>

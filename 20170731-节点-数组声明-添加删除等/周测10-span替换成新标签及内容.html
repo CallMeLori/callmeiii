@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id='div1'><span id='span1'>等你来替换</span></div>
+
+<script>
+  //创建 <i><b>新的内容</b></i>
+    var btag = document.createElement('b')
+        btag.innerText = '新的内容';
+    var itag = document.createElement('i');
+        itag.appendChild(btag);
+
+    var span1 = document.getElementById('span1')    ;
+
+  span1.parentNode.replaceChild(itag,span1);
+
+</script>
+
+</body>
+</html>

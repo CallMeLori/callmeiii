@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--3、一个div边框盒子，实现从左向右匀速移动-->
+    <style>
+        #box{
+            width: 150px;
+            height: 150px;
+            background-color: darkgreen;
+            position: relative;
+            left: 0;
+            top: 30px;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="向右移动" id="btn" onclick="fn()">
+<div id="box"></div>
+
+<script>
+    var timer;
+
+    var btn = document.getElementById("btn");
+    var box = document.getElementById("box");
+    clearInterval(timer);
+
+    function fn(){
+        timer=setInterval(function(){
+            var speed = 1;
+            box.style.left = box.offsetLeft + speed +"px";
+
+            if(box.style.left=="600px"){
+                clearInterval(timer);
+            }
+        },15)
+
+    }
+
+
+
+</script>
+</body>
+</html>

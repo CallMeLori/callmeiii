@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--封装一个设置cookie的方法-->
+</head>
+<body>
+<script>
+    function setCookie(key,value,day){
+        var date = new Date();
+        date.setTime(date.getTime()+ day*24*60*60*1000);
+        document.cookie = key + '=' + value +';expires' + date.toGMTString();
+    }
+    setCookie('user','viki',1);
+    setCookie('age','22',3);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .outline{
+            border:solid 10px yellow;
+        }
+        .bolder {
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box" name="box">中华人民共和国</div>
+
+<script>
+    var box = document.getElementById('box');
+    var red = '#0000ff';  //r(红)g（green）b(blue)
+    //改变样式
+    box.style.background = red;
+    box.style.fontSize   = '60px';
+    box.style.color      = 'white';
+    box.className =  'outline';
+    box.classList.add('bolder');   //追加类名
+    box.classList.remove('bolder');   //删除类名
+</script>
+
+
+</body>
+</html>

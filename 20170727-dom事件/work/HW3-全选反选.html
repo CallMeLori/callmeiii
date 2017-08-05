@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+
+    <input type="button" value="全选" id="all">
+<input type="button" value="不选" id="no">
+<input type="button" value="反选" id="opposite"> <br>
+
+<input type="checkbox" name="" class="checkbox"> <br>
+<input type="checkbox" name="" class="checkbox"> <br>
+<input type="checkbox" name="" class="checkbox"> <br>
+<input type="checkbox" name="" class="checkbox"> <br>
+<input type="checkbox" name="" class="checkbox"> <br>
+
+    <input type="checkbox" name="" class="checkbox"> <br>
+    <input type="checkbox" name="" class="checkbox"> <br>
+    <input type="checkbox" name="" class="checkbox"> <br>
+    <input type="checkbox" name="" class="checkbox"> <br>
+    <input type="checkbox" name="" class="checkbox"> <br>
+    <input type="checkbox" name="" class="checkbox"> <br>
+
+
+</form>
+
+<script>
+    var all = document.getElementById("all");
+    var no = document.getElementById("no");
+    var opposite = document.getElementById("opposite");
+
+    var checkbox = document.getElementsByClassName("checkbox");
+
+    all.onclick = function(){
+        for (var i=0;i<checkbox.length;i++){
+           checkbox[i].checked=true;
+        }
+    }
+     no.onclick = function(){
+         for (var i=0;i<checkbox.length;i++){
+             checkbox[i].checked=false;
+         }
+     }
+    opposite.onclick = function(){
+        for (var i=0;i<checkbox.length;i++){
+
+            checkbox[i].checked =!checkbox[i].checked;
+//            if(checkbox[i].checked==true){
+//                checkbox[i].checked=false;
+//            }else {
+//                checkbox[i].checked=true;
+//            }
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>

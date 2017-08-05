@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--封装一个方法，实现数组去重-->
+    <!--var array = [2,4,1,8,4,6,3,2,5,6,1,7,9,8];-->
+    <script>
+        var array = [2,4,1,8,4,6,3,2,5,6,1,7,9,8];
+        function ArrList( ){
+            var newArray = [];
+            for(var i = 0;i<array.length;i++){
+                if(newArray.indexOf(array[i]) == -1){
+                    newArray.push(array[i]);
+                }
+            }
+            return newArray;
+        }
+      document.write(ArrList());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

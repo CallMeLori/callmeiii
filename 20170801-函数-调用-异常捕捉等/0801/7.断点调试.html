@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var max = 100 ;
+    for(var i=10 ; i< max ;i++ ){
+      //断点命令debugger
+      debugger
+      var val = multi(i);
+      document.write(val +"<br>")
+    }
+
+    function multi(m){
+      var n = m*m;
+      return n;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--如何清除浮动，请写出相关的代码-->
+    <!--clear  清除浮动-->
+    <!--after清除浮动(用于IE8以上)-->
+    <style>
+        #bigBox{
+            border: 1px solid black;
+            background: gray;
+            color: black;
+            margin: 50px auto;
+            padding: 50px;
+
+            /*父类加overflow*/
+            /*overflow: hidden;*/
+
+            zoom:1;
+        }
+        /*after清除浮动(用于IE8以上)*/
+        #bigBox:after{
+            clear:both;
+            content: "";
+            display:block;
+            visibility:hidden;
+        }
+        #box1{
+            width: 70px;
+            height: 70px;
+            background-color: red;
+            float: left;
+        }
+        #box2{
+              width: 70px;
+              height: 70px;
+              background-color: yellow;
+              float: left;
+        }
+        #box3{
+                width: 70px;
+                height: 70px;
+                background-color: blue;
+                float: left;
+        }
+        /*clear  清除浮动*/
+        /*#clearBox{*/
+            /*clear:both;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+
+<div id="bigBox">
+    <div id="box1">1</div>
+    <div id="box2">2</div>
+    <div id="box3">3</div>
+    <div id="clearBox"></div>
+</div>
+
+
+</body>
+</html>

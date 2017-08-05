@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1创建数组
+    var array1 = new Array(1,2,3,4);
+
+    //数组克隆（拷贝）
+    //1、通过slice(0)
+    var copy1 = array1.slice(0);
+    //2,通过concat复制
+    var copy2 = array1.concat();
+    document.write(array1+"<br>");
+    document.write(copy1+"<br>");
+    document.write(copy2+"<br>");
+    document.write( "<hr>")
+
+    //改变array1，看复制是否成功
+    array1.push(5,6,7);
+    document.write(array1+"<br>");
+    document.write(copy1+"<br>");
+    document.write(copy2+"<br>");
+    document.write( "<hr>")
+
+
+
+</script>
+
+
+</body>
+</html>

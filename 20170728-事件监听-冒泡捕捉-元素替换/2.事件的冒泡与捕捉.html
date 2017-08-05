@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            position: absolute;
+            left:0px;
+            top:0px;
+            width:200px;
+            height:200px;
+            border:solid 5px red;
+            background: red;
+        }
+        #div2{
+            position: absolute;
+            left:0px;
+            top:0px;
+            width:150px;
+            height:150px;
+            border:solid 3px blue;
+            background: blue;
+        }
+        #div3 {
+            position: absolute;
+            left:0px;
+            top:0px;
+            width:100px;
+            height:100px;
+            border:solid 1px black;
+            background: black;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="div1">
+    <div id="div2">
+        <div id="div3">冒泡和捕捉</div>
+    </div>
+</div>
+
+
+
+<script>
+    //冒泡：从里到外层
+    //捕获：从外到里
+
+    var div1 = document.getElementById('div1');
+    var div2 = document.getElementById('div2');
+    var div3 = document.getElementById('div3');
+
+    div1.addEventListener('click',function(){
+        alert('div1')
+    },true)
+    div2.addEventListener('click',function(){
+      alert('div2')
+    },true)
+    div3.addEventListener('click',function(){
+      alert('div3')
+    },true)
+
+</script>
+
+</body>
+</html>

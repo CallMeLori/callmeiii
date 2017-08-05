@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">我是一个div元素</div>
+
+<script>
+    //获取body
+    var b = document.getElementsByTagName('body')[0];
+
+    var box = document.getElementById('box');
+
+    //移除节点 元素
+    //b.removeChild(box);
+    //第二种，通过父节点删除
+    box.parentNode.removeChild(box);
+
+</script>
+
+</body>
+</html>

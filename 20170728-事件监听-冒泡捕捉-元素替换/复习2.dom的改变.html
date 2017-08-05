@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border:solid 5px red;
+            margin:10px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="box" name="dv" class="boxcss" ><b>中国</b></div>
+
+<img  src="" alt="图片 没找到">
+
+<script>
+    //通过id获取节点 对象
+    var box = document.getElementById('box');
+        box.innerText = '中国人民';
+        box.style.background = 'blue';
+        box.style.color = 'white';
+        box.className = 'aaaa' ;
+
+    var img = document.getElementsByTagName('img')[0] ;
+
+        img.src = 'https://www.baidu.com/img/bd_logo1.png';
+
+</script>
+
+
+
+</body>
+</html>

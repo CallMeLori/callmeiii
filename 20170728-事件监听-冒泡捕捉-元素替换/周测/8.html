@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--8、给body里一个input输入框，绑定一个事件监听，-->
+    <!--当输入的文字为非数字时，弹出提示“请输入数字”-->
+</head>
+<body>
+
+请输入：
+<input type="text" id="inp">
+<script>
+    var inp = document.getElementById("inp");
+    inp.addEventListener("keyup",function(){
+        var g =inp.value;
+        var m = g[g.length-1];
+        if (g.length != 0){
+            if (m!=0 && m!=1 && m!=2 && m!=3 && m!=4 && m!=5 && m!=6 && m!=7 && m!=8 && m!=9 ){
+                alert("请输入数字");
+                inp.value="";
+            }
+        }
+
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

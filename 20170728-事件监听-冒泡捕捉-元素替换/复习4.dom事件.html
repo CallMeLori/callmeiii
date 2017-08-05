@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background: red;
+            margin:10px;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+<p><input type="button" value="改变颜色"></p>
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+<script>
+    //获取按钮
+    var button  = document.getElementsByTagName('input')[0];
+
+    button.onclick = function(){
+      //获取所有的div
+      var divs = document.getElementsByTagName('div');
+      for (var i=0;i< divs.length ; i++){
+        if (i % 2 ==0){
+          divs[i].style.background = 'blue';
+        } else {
+          divs[i].style.background = 'green';
+        }
+
+
+      }
+
+
+    }
+
+</script>
+
+</body>
+</html>

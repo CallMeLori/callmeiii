@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 540px;
+            height: 306px;
+        }
+        td{
+            border-radius: 50%;
+            background-color:red;
+        }
+        .blue{
+            background-color:blue;
+        }
+    </style>
+    <script>
+        document.write("<table>");
+        for(var m=1;m<6;m++){
+
+            document.write("<tr>");
+            for (var n=1;n<10;n++){
+                if (m==3 || n==5){
+                    document.write("<td class='blue'></td>")
+                    continue;
+                }
+                document.write("<td></td>")
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+
+
+        //            if(m==3){
+        //                document.write("<tr class='blue'><td></td><td></td><td></td><td></td>\
+        //            <td></td><td></td><td></td><td></td><td></td></tr>")
+        //                continue;
+        //            }
+        //            document.write("<tr><td></td><td></td><td></td><td></td>\
+        //            <td style='background-color:#0099FF'></td><td></td><td></td>\
+        //                    <td></td><td></td></tr>")
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

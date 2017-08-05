@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //条件判断if  else  |   switch
+    var a = 123;
+    var b = 99;
+
+    if (a>b){
+      document.write('a > b')
+    } else {
+      document.write('a < b');
+    }
+    document.write('<hr>');
+
+    //范围区间判断
+    var age = 65;
+    if (age<18){
+      document.write('你是未成年人') ;
+    } else if ( age >=18 && age <=30 ){
+      document.write('你是青年人')
+    } else if (age >30 && age<60) {
+      document.write('你是中年人')
+    } else if(age>=60){
+      document.write('你是老年人了')
+    }
+    document.write('<hr>');
+
+    var city = 'ss';
+    switch (city){
+      case 'sz':
+        document.write('深圳')
+        break;
+
+      case 'gz':
+        document.write('广州')
+        break;
+      case 'sh':
+        document.write('上海')
+        break;
+      case 'bj':
+        document.write('北京')
+        break;
+      default:
+        document.write('中国的城市')
+        break;
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

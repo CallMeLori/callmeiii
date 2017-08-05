@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        try{
+          showMessage('显示异常');
+        } catch (error){
+          //执行出错 ，则执行此代码块
+          //alert(error);
+          //自定义错误信息，抛出错误到控制台
+          throw  new Error('你没有声音这个方法，所以我给你报错了，错误码1001')
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

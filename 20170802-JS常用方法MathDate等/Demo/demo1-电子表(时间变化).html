@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电子表</title>
+    <style>
+        #time div:nth-child(odd){
+            width: 30px;
+            height: 20px;
+            float: left;
+            background-color: hotpink;
+            color: white;
+            font-size: large;
+            padding: 10px 0;
+        }
+        #time div:nth-child(even){
+            width: 30px;
+            height: 20px;
+            float: left;
+            background-color: hotpink;
+            color: white;
+            font-size: large;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="time">
+    <div id="hh">00</div>
+    <div id="mh1">:</div>
+    <div id="mm">00</div>
+    <div id="mh2">:</div>
+    <div id="ss">00</div>
+
+    <input type="button" value="开始" id="start" onclick="mytime()">
+    <input type="button" value="结束" id="end" onclick="stoptimer()">
+
+</div>
+<script>
+    var time;
+    function mytime(){
+        time = setInterval(function(){
+            //获取日期对象
+            var date = new Date();
+            var hh = date.getHours();
+            var mm = date.getMinutes();
+            var ss = date.getSeconds();
+
+            //获取div 时间对象
+            var hhDiv = document.getElementById("hh");
+            hhDiv.innerText = hh<10?'0'+hh:hh;
+            var mmDiv = document.getElementById("mm");
+            mmDiv.innerText = mm<10?'0'+mm:mm;
+            var ssDiv = document.getElementById("ss");
+            ssDiv.innerText = ss<10?'0'+ss:ss;
+
+            //获取div 冒号对象
+            var mh1Div = document.getElementById("mh1");
+            var mh2Div = document.getElementById('mh2');
+            if (mh1Div.innerText==':'){
+                mh1Div.innerText='';
+            }else{
+                mh1Div.innerText=':'
+            }
+
+            if (mh2Div.innerText==':'){
+                mh2Div.innerText='';
+            }else{
+                mh2Div.innerText=':'
+            }
+
+        },1000)
+
+    }
+   // mytime();
+    //停止时钟
+    function stoptimer(){
+        clearInterval(time);
+    }
+
+</script>
+</body>
+</html>

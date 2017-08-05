@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background: blue;
+            line-height: 200px;
+            text-align: center;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div id="box" >监听事件</div>
+
+<script>
+    var box = document.getElementById('box');
+    //事件的监听
+    box.addEventListener('click',function(){
+        alert('你点我了');
+    },false)
+    box.addEventListener('mouseover',function(){
+      //alert('你在我身上了');
+    },false)
+
+    box.addEventListener('mouseout',function(){
+      alert('你离开我了');
+    },false)
+
+</script>
+
+</body>
+</html>

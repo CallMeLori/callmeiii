@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            border:solid 5px blue;
+            width:200px;
+            padding:20px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="box">事件实例</div>
+
+<script>
+    var box = document.getElementById('box');
+        //绑定左键点击事件
+        box.onclick = function(){
+            alert('你点我了')
+        }
+
+        //绑定鼠标移入元素的事件
+        box.onmouseover = function(){
+          this.style.background = 'red';
+        }
+        //移出
+        box.onmouseout = function(){
+          this.style.background = 'white';
+        }
+
+
+        box.onmousedown = function(){
+          alert('鼠标按下了')
+        }
+        box.onmouseup = function(){
+          alert('鼠标松开了')
+        }
+
+</script>
+
+
+</body>
+</html>

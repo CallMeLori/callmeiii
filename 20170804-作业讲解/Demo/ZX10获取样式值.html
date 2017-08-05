@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--10、封装一个获取样式值的方法，要求兼容ie8以下浏览器-->
+    <style>
+        #box{
+            width: 200px;
+            height: 180px;
+            border: solid 1px deeppink;
+            background-color: pink;
+            color: white;
+            font-size: 30px;
+            position: relative;
+            top: 10px;
+            left: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    获取样式值
+</div>
+<script>
+    var box =document.getElementById("box");
+    function getStyleValue(obj,key){
+        var mystyle;
+        if(obj.currentStyle){
+            mystyle = obj.currentStyle;
+        }
+        else{
+            mystyle = window.getComputedStyle(box,false);
+
+        }
+        return mystyle[key];
+    }
+    document.write("<hr>");
+    document.write("获取样式的值如下：<br>");
+    document.write("宽度："+getStyleValue(box,"width")+"<br>");
+    document.write("高度："+getStyleValue(box,"height")+"<br>");
+    document.write("背景颜色："+getStyleValue(box,"background-color")+"<br>");
+    document.write("文字颜色："+getStyleValue(box,"color")+"<br>");
+
+</script>
+</body>
+</html>
