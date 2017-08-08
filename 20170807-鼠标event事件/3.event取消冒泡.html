@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       #outbox{
+            width:200px;
+            height:200px;
+            border:solid 3px blue;
+        }
+       #inbox{
+           width:150px;
+           height:150px;
+           border:solid 3px red;
+           background: red;
+       }
+
+    </style>
+</head>
+<body>
+
+<div id="outbox">
+    我是外层
+    <div id="inbox">我是内层</div>
+</div>
+
+<script>
+    var outbox = document.getElementById('outbox');
+    var inbox = document.getElementById('inbox');
+
+    //绑定事件
+    outbox.addEventListener('click',function(event){
+           console.log('outbox...')
+    })
+
+    inbox.addEventListener('click',function(event){
+        //第一方式：取消冒泡
+        //event.cancelBubble = true;
+
+        //第二方式：
+        event.stopPropagation();
+
+        console.log('inbox....')
+    })
+
+
+
+</script>
+
+
+</body>
+</html>

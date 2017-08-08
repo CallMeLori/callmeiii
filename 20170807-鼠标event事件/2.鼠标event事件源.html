@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            position: relative;
+            left:150px;
+            top:150px;
+            border:solid 2px red;
+            width:200px;
+            height:200px;
+
+
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="box">我绑定了一个事件</div>
+
+<script>
+    var box= document.getElementById('box');
+        box.onclick= function(event){
+          debugger
+          var target ;
+           if (event.srcElement){
+             //兼容ie8
+             target = event.srcElement;
+           } else {
+             target =   event.target;
+           }
+           alert(target.innerText)
+
+        }
+
+</script>
+
+</body>
+</html>

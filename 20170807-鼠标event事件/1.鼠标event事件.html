@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            position: relative;
+            left:150px;
+            top:150px;
+            border:solid 2px red;
+            width:200px;
+            height:200px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="box">我绑定了一个事件</div>
+
+<script>
+    var box= document.getElementById('box');
+        box.onclick= function(event){
+          //e就是事件对象
+
+          /*****/
+          //此两个相对浏览器文档的左上角的位置
+          //对ie8不支持
+          console.log('client:' + event.clientX + ' - ' + event.clientY );
+          //一般用pageX,pageY，兼容性更好
+          console.log('page:' + event.pageX + ' - ' + event.pageY );
+          /****/
+
+
+          //相对于显示屏的左上角的x,y的坐标
+          console.log('screen:' + event.screenX + ' - ' + event.screenY );
+
+          //相对于元素本身的左上角的x,y的位置
+          console.log('offset:' + event.offsetX + ' - ' + event.offsetY );
+        }
+
+</script>
+
+</body>
+</html>

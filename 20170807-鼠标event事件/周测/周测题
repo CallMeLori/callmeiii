@@ -1,0 +1,105 @@
+周测题：
+1、doctype是什么
+   docoment type :声明文档类型，告诉浏览器用什么版本的规则，来解析页面里的html标签，脚本等
+
+   html > xhtml(要求元素名称小写，且必须闭合，不能乱错乱，对js写法要求很高) > html5
+
+
+2、写出通过样式设置颜色的几种方式，说明它们的不同之处
+   第一：通过颜色英文名称   background:red;
+   第二：通过十六进制      background:#ff0000;
+   第三种：通过rgb方式     background:rgb(255,0,0);
+   第四种：通过rgb百分比的方式  background:rgb(100%,0%,0%);
+
+   第五种：带透明度的rgba   background:rgba(255,0,0,125); (html5支持)
+
+
+3、样式中的盒子模型是什么
+   具有容器属性的div,p等：主要特点包括内容(content),边框（border),内边距(padding),外边距(margin)
+
+
+
+4、请写出下面"a,b,c,d"的结果
+   var a = undefined == null  ;  //true
+   var b = undefined == 0    ;   //false
+   var c = null == 0         ;   //false
+   var d = undefined == ''   ;   //false
+
+   记住：undefined == null  ==>true
+        0    ==    ''      ==>true
+        undefined == 0     ==>false;
+
+
+5、请写出下面的结果
+   for (var i = 0 ; i < 5 ;i++ ){
+      console.log(i);
+   }
+   var e = i ;
+   e是多少？  5
+
+
+
+6、请说明cookie的功能，并封装一个设置cookie的方法
+   存储本地数据
+   遵循同源策略
+   设置过期时间
+   设置访问的路径
+   可以手动清除
+   通过js获取或操作
+
+   function setCookie(key,value ,day){
+      var date = new Date();
+      date.setTime(date.getTime()+ day*24*60*60*1000);
+      document.cookie = key+ '='+value +';expires='+date.toGMTString();
+   }
+
+
+
+7、如何清除浮动，请写出相关的代码
+    第一： .over {
+              overflow:hidden;
+           }
+           定义在容器元素上
+           缺点就是会把超长的内容会隐藏
+    第二：clear:both
+         定义在容器内部最后面，加一个标签上
+         <div >
+            ....
+            <div style="clear:both;"></div>
+         </div>
+         缺点多了标签，导致dom结构错杂
+    第三：用伪类after实现
+         定义在容器上
+         也可兼容ie8
+         <div class='box'>
+            ....
+
+         </div>
+         .box:after{
+            content:'';
+            hieght:0px;
+            line-height:0px;
+            display:block;
+            visiblity:hidden;
+            clear:both;
+         }
+
+         .box{
+            zoom:1 ;     //为了兼容ie
+            *zoom:1 ;
+         }
+
+
+8、封装一个方法，实现数组去重
+   var array = [2,4,1,8,4,6,3,2,5,6,1,7,9,8];
+
+
+
+
+
+
+9、封装一个方法，实现每秒自动输出1到10之间的数，并在输出10之后自动停止执行。
+
+
+
+10、封装一个获取样式值的方法，要求兼容ie8以下浏览器

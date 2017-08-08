@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #big{
+            width: 100%;
+            height: 100%;
+            background: rgba(96,96,96,0.5);
+            position: absolute;
+            top:0;
+            left:0;
+            display: none;
+        }
+        #big #box{
+            width: 300px;
+            height: 200px;
+            background-color: lightskyblue;
+            color: white;
+            margin: 280px auto;
+            text-align: center;
+            display: none;
+        }
+        #big #box #title{
+            padding-top: 28px;
+        }
+        /*.none{*/
+            /*display: none;*/
+        /*}*/
+    </style>
+    <script>
+        window.onload = function() {
+            var btn1 = document.getElementById('btn1');
+            var btn2 = document.getElementById('btn2');
+            var big = document.getElementById('big');
+            var box = document.getElementById('box');
+//            var none = document.getElementsByClassName('none');
+
+        btn1.onclick = function(){
+            big.style.display = 'block';
+            box.style.display = 'block';
+//            big.classList.remove('none');
+
+        }
+        btn2.onclick = function(){
+            big.style.display = 'none';
+            box.style.display = 'none';
+//            big.classList.add('none');
+        }
+        }
+
+    </script>
+</head>
+<body>
+<input type="button" value="弹出层" id="btn1">
+
+<div id="big" class="none">
+    <div id="box">
+        <p id="title">用户登录信息</p>
+        <p>账户： <input type="text"></p>
+        <p>密码： <input type="text"></p>
+        <p><input type="reset" value="取消">
+            <input type="submit" value="确认" id="btn2">
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+           width:100px;
+            height:80px;
+            background:red;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script>
+
+    function getStyleValue(obj,s){
+      var styleObj ;
+      if (obj.currentStyle){
+        styleObj = obj.currentStyle;
+      } else {
+        styleObj = window.getComputedStyle(obj,false);
+      }
+      return styleObj[s];
+
+    }
+
+    var box = document.getElementById('box');
+
+    alert(getStyleValue(box,'width'))
+    alert(getStyleValue(box,'background'))
+</script>
+
+
+</body>
+</html>
