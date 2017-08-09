@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #mask{
+            position: absolute;
+            top:0px;
+            left:0px;
+            width:100%;
+            height: 100%;
+            background: rgba(0,0,0,.5);
+            /* opacity: .3; */   /*  把父子都变为透明*/
+        }
+
+        #box{
+            position: relative;
+            top:150px;
+            width:320px;
+            height:240px;
+            background: lightblue;
+            margin:0 auto;
+
+
+
+        }
+        #box p{
+            margin-left:50px;
+
+        }
+        #box .title{
+            position: relative;
+            padding-top: 20px;
+            margin-top:20px;
+            margin-left:0px;
+            text-align: center;
+        }
+        .none{
+            display: none;
+        }
+    </style>
+
+    <script>
+        window.onload = function(){
+          //post是打开窗口
+          var post = document.getElementById('post');
+          //窗口的容器
+          var mask = document.getElementById('mask');
+          //关闭窗口
+          var login = document.getElementById('login');
+
+
+          post.addEventListener('click',function(){
+            mask.classList.remove('none');
+          })
+
+
+          login.onclick = function(){
+            mask.classList.add('none');
+          }
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+<p><input type="button" id="post" value="弹窗"></p>
+
+<div>
+
+    <div><span>aaa</span><span>3333</span></div>
+</div>
+
+<div>
+    <div><span>555</span><span>444</span></div>
+</div>
+
+<div id="mask" class="none">
+    <div id="box">
+        <p class="title">登录窗口</p>
+        <p>账号：<input type="text"></p>
+        <p>密码：<input type="password"></p>
+        <p style="padding-left: 50px;"><input type="reset" value="取消"><input id="login" type="button" value="确定"></p>
+    </div>
+</div>
+
+</body>
+</html>

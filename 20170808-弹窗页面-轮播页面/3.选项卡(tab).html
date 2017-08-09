@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡（标签tab）</title>
+    <style>
+        #tab{
+            list-style: none;
+            zoom:1;
+            margin:0;
+            padding:0;
+        }
+        #tab:after{
+            content:'';
+            height:0px;
+            line-height: 0px;
+            display:block;
+            visibility: hidden;
+            clear: both;
+        }
+
+
+        #tab li{
+            float:left;
+            width:150px;
+            height:30px;
+            background: gray;
+            text-align: center;
+            line-height:30px;
+            /*margin-right: 1px;*/
+            border-right:solid 1px white;
+            color:white;
+            cursor:pointer;
+        }
+
+        #tab li.lightblue{
+            background: lightblue;
+        }
+
+        #tab li:hover{
+            background: lightblue;
+        }
+
+        #content{
+            width:601px;
+            height:500px;
+            border:solid 1px gray;
+            border-top:none;
+        }
+        .none{
+            display:none;
+        }
+
+    </style>
+
+    <script>
+        var tab ,tabChildren, content;
+        window.onload = function(){
+            //取tab选项
+            var tab = document.getElementById('tab');
+          //取内容
+          content = document.getElementById('content');
+          var contentChildren = content.children;
+          tabChildren = tab.children;
+
+            tabChildren[0].onclick = function(){
+              this.className = 'lightblue';
+              tabChildren[1].className = '';
+              tabChildren[2].className = '';
+              tabChildren[3].className = '';
+
+              for(var i=0; i< contentChildren.length ;i++ ){
+                if (i==0){
+                  contentChildren[i].className = '';
+                } else {
+                  contentChildren[i].className = 'none'
+                }
+              }
+
+            }
+
+          tabChildren[1].onclick = function(){
+            this.className = 'lightblue';
+            tabChildren[0].className = '';
+            tabChildren[2].className = '';
+            tabChildren[3].className = '';
+
+            for(var i=0; i< contentChildren.length ;i++ ){
+              if (i==1){
+                contentChildren[i].className = '';
+              } else {
+                contentChildren[i].className = 'none'
+              }
+            }
+
+          }
+
+          tabChildren[2].onclick = function(){
+            this.className = 'lightblue';
+            tabChildren[1].className = '';
+            tabChildren[0].className = '';
+            tabChildren[3].className = '';
+
+            for(var i=0; i< contentChildren.length ;i++ ){
+              if (i==2){
+                contentChildren[i].className = '';
+              } else {
+                contentChildren[i].className = 'none'
+              }
+            }
+
+          }
+
+          tabChildren[3].onclick = function(){
+            this.className = 'lightblue';
+            tabChildren[1].className = '';
+            tabChildren[2].className = '';
+            tabChildren[0].className = '';
+
+            for(var i=0; i< contentChildren.length ;i++ ){
+              if (i==3){
+                contentChildren[i].className = '';
+              } else {
+                contentChildren[i].className = 'none'
+              }
+            }
+
+          }
+
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+
+<ul id="tab">
+    <li class="lightblue">马化腾</li>
+    <li>马云</li>
+    <li>李颜红</li>
+    <li>任正非</li>
+</ul>
+
+<div id="content">
+    <div class="">马化腾</div>
+    <div class="none">马云</div>
+    <div class="none">李颜红</div>
+    <div class="none">任正非</div>
+</div>
+
+</body>
+</html>

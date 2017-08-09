@@ -1,0 +1,54 @@
+今日课程
+1、json,创建，修改，删除，转字符串，json字符转json
+   javascript object notation(js脚本对象标志)
+   作用：一种轻量级数据交互的格式，用来客户端与服务器进行数据交互。
+
+   早期没有json数据格式之前，用的是xml
+
+   xml的结构有开始标记和结束标记，如html一样
+   <family>
+        <name>王思聪</name>
+   </family>
+
+   演变到现在的json
+   {
+      "name":"王思聪",
+      "sex" :"性别"
+   }
+
+
+
+
+
+
+2、ajax,xhr,与后端交互
+
+
+
+
+
+
+
+
+
+
+  var xmlhttp;
+
+  if (window.XMLHttpRequest)
+  {
+    xmlhttp=new XMLHttpRequest();
+  }  else  {
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function()
+  {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+      console.log(xmlhttp.responseText);
+      debugger
+    }
+  }
+
+  xmlhttp.open("POST","http://localhost:8080/CateringSystem1.0/recruitment/catering/login.do?method=login",true);
+  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  xmlhttp.send('memberId=1234&password=123456');

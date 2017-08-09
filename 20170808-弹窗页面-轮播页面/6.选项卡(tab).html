@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡（标签tab）</title>
+    <style>
+        #tab{
+            list-style: none;
+            zoom:1;
+            margin:0;
+            padding:0;
+        }
+        #tab:after{
+            content:'';
+            height:0px;
+            line-height: 0px;
+            display:block;
+            visibility: hidden;
+            clear: both;
+        }
+
+
+        #tab li{
+            float:left;
+            width:150px;
+            height:30px;
+            background: gray;
+            text-align: center;
+            line-height:30px;
+            /*margin-right: 1px;*/
+            border-right:solid 1px white;
+            color:white;
+            cursor:pointer;
+        }
+
+        #tab li.lightblue{
+            background: lightblue;
+        }
+
+        #tab li:hover{
+            background: lightblue;
+        }
+
+        #content{
+            width:601px;
+            height:500px;
+            border:solid 1px gray;
+            border-top:none;
+        }
+        .none{
+            display:none;
+        }
+
+    </style>
+
+    <script>
+        var tab , content;
+        window.onload = function(){
+          tab = document.getElementById('tab') ;
+          content = document.getElementById('content') ;
+          //绑定事件
+          var tabChildren = tab.children;
+          //第一个li
+          tabChildren[0].onclick = function(){
+            changeLi(tabChildren,this,0);
+
+          }
+          //第二个li
+          tabChildren[1].onclick = function(){
+            changeLi(tabChildren,this,1);
+
+          }
+          //第三个li
+          tabChildren[2].onclick = function(){
+            changeLi(tabChildren,this,2);
+
+          }
+          //第四个li
+          tabChildren[3].onclick = function(){
+            changeLi(tabChildren,this,3);
+
+          }
+        }
+
+        //封装li切换方法
+        function changeLi(tabChildren,target,index){
+          //先清除已有lightblue的样式
+          for(var i =0 ; i < tabChildren.length;i++ ){
+            tabChildren[i].classList.remove('lightblue');
+          }
+          //获取当前对象
+          target.classList.add('lightblue') ;
+
+
+
+          //显示容器
+          var contentChildren = content.children;
+          for(var i =0 ; i < contentChildren.length;i++ ){
+            contentChildren[i].classList.add('none');
+          }
+          contentChildren[index].classList.remove('none')
+
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+<ul id="tab">
+    <li class="lightblue">马化腾</li>
+    <li>马云</li>
+    <li>李颜红</li>
+    <li>任正非</li>
+</ul>
+
+<div id="content">
+    <div>马化腾</div>
+    <div class="none">马云</div>
+    <div class="none">李颜红</div>
+    <div class="none">任正非</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var json = {
+        "name":"loona",
+        "sex" : "female",
+        "friend":["nana","jiji","koko"],
+        "family":{
+            "mam":"mm",
+            "dad":"dd",
+            "sister":["sisi","didi","lolo"],
+            "bro":["qq","iu"]
+        }
+    };
+//第一种方式 通过一个“ . ”
+ //   alert(json.friend[1]);
+ alert(json.family.sister);
+
+    //第二种方式 通过“ [] ”
+   // alert(json["family"]["sister"][0])
+  //  alert(json["friend"][2])
+
+
+
+</script>
+
+</body>
+</html>

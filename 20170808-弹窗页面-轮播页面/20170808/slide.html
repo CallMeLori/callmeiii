@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container{
+            width:100%;
+            height:450px;
+
+        }
+        #slide {
+            position:relative;
+            width:800px;
+            height:450px;
+            line-height:450px;
+            border:solid 3px gray;
+            margin:0 auto;
+            cursor: pointer;
+        }
+        #lt{
+            position: absolute;
+            left:0px;
+            top:50%;
+            margin-top:-25px;
+            display:block;
+            width:50px;
+            height:50px;
+            line-height:50px;
+            text-align:center;
+            font-size:32px;
+            background:gray;
+            cursor: pointer;
+            background: rgba(0,0,0,.3);
+            color:white;
+        }
+        #rt{
+            position:absolute;
+            right:0px;
+            top:50%;
+            margin-top:-25px;
+            display:block;
+            width:50px;
+            height:50px;
+            line-height:50px;
+            text-align:center;
+            font-size:32px;
+            background:gray;
+            background: rgba(0,0,0,.3);
+            color:white;
+        }
+        img{
+            position: absolute;
+            left:0px;
+        }
+        #tab {
+            position: absolute;
+            right:30px;
+            bottom:30px;
+            list-style: none;
+            zoom:1;
+        }
+        #tab:after{
+            content:'';
+            height: 0px;
+            line-height: 0px;
+            display:block;
+            visibility: hidden;
+            clear: both;
+        }
+        #tab li{
+            float:left;
+            margin:5px;
+            width:50px;
+            height:50px;
+            text-align: center;
+            color:white;
+            line-height: 50px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.5);
+        }
+        #tab li.active{
+            background:rgba(0,100,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div id="slide">
+        <img id="pic"  src="img/1.jpg" alt="">
+        <span id="lt">&lt;</span>
+        <span id="rt">&gt;</span>
+        <ul id="tab">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+
+</div>
+
+<script>
+    var lt = document.getElementById('lt');
+    var rt = document.getElementById('rt');
+    var pic = document.getElementById('pic');
+    var tab = document.getElementById('tab');
+    var i = 1;
+    rt.onclick = function(){
+        if (i >=5){
+            i = 1;
+        } else {
+            i++;
+        }
+        pic.src='img/'+i+'.jpg';
+        lightTab(i);
+    }
+    lt.onclick = function(){
+
+        if (i <=1){
+            i = 5;
+        } else {
+            i--;
+        }
+        pic.src='img/'+i+'.jpg';
+        lightTab(i);
+    }
+    var tabChildren = tab.children;
+    function lightTab(index){
+
+        for (var j =1 ; j <= tabChildren.length ; j++ ){
+            if (j===index){
+                tabChildren[j-1].className = 'active';
+            } else {
+                tabChildren[j-1].className = '';
+            }
+        }
+    }
+
+    for(var k = 1 ;  k<=tabChildren.length ;k++){
+        tabChildren[k-1].onclick = function(){
+            var picIndex = this.innerText;
+                i= picIndex*1;
+            pic.src='img/'+picIndex+'.jpg';
+
+            for (var j =1 ; j <= tabChildren.length ; j++ ){
+                if (j==picIndex){
+                    tabChildren[j-1].className = 'active';
+                } else {
+                    tabChildren[j-1].className = '';
+                }
+            }
+
+        }
+
+        tabChildren[k-1].onmouseover = function(){
+            var picIndex = this.innerText;
+            i= picIndex*1;
+            pic.src='img/'+picIndex+'.jpg';
+
+            for (var j =1 ; j <= tabChildren.length ; j++ ){
+                if (j==picIndex){
+                    tabChildren[j-1].className = 'active';
+                } else {
+                    tabChildren[j-1].className = '';
+                }
+            }
+
+        }
+
+
+
+    }
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

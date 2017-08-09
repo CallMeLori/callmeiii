@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //通过 key ，value（键值对）对应
+    var json = {
+      "name":"罗玉凤",
+      "boyfriend":["安倍晋三","奥巴马","莫迪"],
+      "friend":{
+        "chengdu":["郭敬明"],
+        "shenzhen":["万老师"],
+        "shanghai":["孙莉"]
+
+      },
+      aaa:null
+    };
+
+    //修改json对象的值
+    json.name = "芙蓉姐姐";
+    //修改json数组里的数据
+    json.boyfriend[1] = "郭敬明";
+    //添加到数组
+    json.boyfriend.push("黄晓明");
+
+    //向json再加一个键值对
+    json.son  = "罗思聪";
+    json.brother = ["小猪","邓超","黑人","李晨"];
+
+
+    console.log(json)
+
+
+
+</script>
+
+</body>
+</html>

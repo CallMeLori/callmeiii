@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #content{
+            width: 100%;
+            height: 450px;
+        }
+        #content #box{
+            border: 3px solid black;
+            position: relative;
+            width: 800px;
+            height: 450px;
+            margin: 0 auto;
+        }
+        #leftBtn{
+            position: absolute;
+            top:50%;
+            background-color: rgba(0,0,0,0.5);
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            font-size: 35px;
+            margin-top: -25px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+
+        #rightBtn{
+            position: absolute;
+            top:50%;
+            right: 0;
+            background-color: rgba(0,0,0,0.5);
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            font-size: 35px;
+            margin-top: -25px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+        #lists{
+            list-style-type: none;
+            position: absolute;
+            bottom: 0;
+            right: 8px;
+
+        }
+        #lists li{
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            float: left;
+            margin-right: 10px;
+            line-height: 47px;
+            font-size: 21px;
+            cursor: pointer;
+        }
+        #lists li.blue{
+            background-color: rgba(0,0,255,0.5);
+        }
+
+    </style>
+    <script>
+        window.onload = function(){
+            var leftBtn = document.getElementById('leftBtn');
+            var rightBtn = document.getElementById('rightBtn');
+
+            var pic = document.getElementById('pic');
+            var lists = document.getElementById('lists');
+            var lis = lists.children;
+
+            var i = 1;
+            rightBtn.onclick = function(){
+                i++;
+                if(i>5){
+
+                    i=1;
+                }
+                for(var h =0;h<lis.length;h++){
+                    var picIndex = lis[h].innerText;
+                    if(picIndex == i){
+                        lis[h].className = 'blue';
+                    }else{
+                        lis[h].className = ' ';
+                    }
+                }
+                console.log(i);
+                pic.src = 'img/'+ i +".jpg";
+
+            }
+
+                leftBtn.onclick = function(){
+                    i--;
+                    if(i<1){
+                        i=5;
+                    }
+                    for(var h =0;h<lis.length;h++){
+                        var picIndex = lis[h].innerText;
+                        if(picIndex == i){
+                            lis[h].className = 'blue';
+                        }else{
+                            lis[h].className = ' ';
+                        }
+                    }
+                    console.log(i);
+                    pic.src = 'img/'+ i +".jpg";
+
+                }
+
+
+
+
+            var timer;
+            function mytime(){
+               timer = setInterval(function(){
+                 i++;
+                 if(i>5){
+                     i=1;
+                 }
+
+                 for(var b =0;b<lis.length;b++){
+                     var picIndex = lis[b].innerText;
+
+                     if(picIndex == i){
+                         lis[b].className = 'blue';
+                     }else{
+                         lis[b].className = ' ';
+                     }
+                 }
+
+
+                 console.log(i);
+                 pic.src = 'img/'+ i +".jpg";
+
+
+            },1000);
+            }
+
+            pic.addEventListener('mouseover',function(){
+                clearInterval(timer);
+            },false);
+            lists.addEventListener('mouseover',function(){
+                clearInterval(timer);
+            },false);
+            pic.addEventListener('mouseout',function(){
+                mytime();
+            },false);
+            lists.addEventListener('mouseout',function(){
+                mytime();
+            },false);
+
+            mytime();
+
+            //绑定li的事件click,mouseover
+            for(var m = 0;m<lis.length;m++){
+                lis[m].onclick = function(){
+                     picIndex = this.innerText;
+                    i = picIndex;
+                    pic.src = 'img/'+i+'.jpg';
+
+                    for(var n = 0;n<lis.length;n++){
+                        lis[n].className = '';
+                    }
+                    this.className = 'blue';
+
+                }
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+<div id="content">
+    <div id="box">
+        <img id="pic" src="img/1.jpg" alt="">
+        <span id="leftBtn">&lt;</span>
+        <span id="rightBtn">&gt;</span>
+
+    <ul id="lists">
+        <li class="blue" >1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

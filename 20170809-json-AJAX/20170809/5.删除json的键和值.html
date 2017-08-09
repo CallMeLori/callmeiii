@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var json = {
+      name:'张三',
+      age:'30',
+      sex:'女',
+      weight:100,
+      height:170,
+      hobby: ['旅游','唱歌','编程'],
+      city:{
+        province:["广东","广西"]
+      }
+    }
+    //删除键
+    delete json.hobby;
+    delete json.city;
+    delete json.weight;
+    delete json.height;
+    
+    //取所有的键和值
+    for(var item in json){
+        console.log(item, json[item] )
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

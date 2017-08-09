@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播页面</title>
+    <style>
+        #content{
+            width: 100%;
+            height: 450px;
+        }
+        #content #box{
+            border: 2px solid black;
+            width: 800px;
+            height: 450px;
+            margin: 0 auto;
+            position: relative;
+
+        }
+        #content #box #leftBtn{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0,0,0,0.5);
+            float: left;
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
+            color: white;
+            font-size: 35px;
+            text-align: center;
+        }
+        #content #box #rightBtn{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0,0,0,0.5);
+            float: right;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-top: -25px;
+            color: white;
+            font-size: 35px;
+            text-align: center;
+        }
+        #content #box #lists{
+            list-style-type: none;
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+
+        }
+        #content #box li{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            text-align: center;
+            font-size: 25px;
+            float: left;
+            line-height: 50px;
+            margin-right: 5px;
+        }
+        #content #box .blue{
+            background-color: rgba(0,0,255,0.5);
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <div id="box">
+        <img id="img" src="img/1.jpg" alt="">
+        <span id="leftBtn">&lt;</span>
+        <span id="rightBtn">&gt;</span>
+
+        <ul id="lists">
+            <li class="blue">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    var leftBtn = document.getElementById('leftBtn');
+    var rightBtn = document.getElementById('rightBtn');
+    var img = document.getElementById('img');
+    var blue = document.getElementsByClassName('blue');
+    var lists = document.getElementById('lists');
+    var lis = lists.children;
+
+    var i = 1;
+    rightBtn.onclick = function(){
+
+        i++;
+        if(i>5){
+            i=1;
+        }
+        //设置图片联动高量；for循环
+        for(var a=0;a<lis.length;a++){
+            var imgIndex = lis[a].innerText;
+            if(imgIndex ==i){
+                lis[a].className = 'blue';
+            }else{
+                lis[a].className = ' ';
+            }
+        }
+
+        //console.log(i);
+        img.src = 'img/'+i+'.jpg';
+    }
+
+
+    leftBtn.onclick = function(){
+        i--;
+        if(i<1){
+            i=5;
+        }
+        //设置图片联动高量；for循环
+        for(var a=0;a<lis.length;a++){
+            var imgIndex = lis[a].innerText;
+            if(imgIndex ==i){
+                lis[a].className = 'blue';
+            }else{
+                lis[a].className = ' ';
+            }
+        }
+
+        //console.log(i);
+        img.src = 'img/'+i+'.jpg';
+    }
+
+    for(var m=0;m<lis.length;m++){
+        lis[m].onmouseover = function(){
+
+            imgIndex = this.innerText;
+            i = imgIndex;
+
+            img.src = 'img/'+imgIndex+'.jpg';
+
+            //取消以前的高亮
+            for(var n=0;n<lis.length;n++){
+               lis[n].className = '';
+            }
+            this.className = 'blue';
+
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //通过 key ，value（键值对）对应
+    var json = {
+      "name":"罗玉凤",
+      "boyfriend":["安倍晋三","奥巴马","莫迪"],
+      "friend":{
+        "chengdu":["郭敬明"],
+        "shenzhen":["万老师"],
+        "shanghai":["孙莉"]
+      },
+      aaa:null
+    };
+
+    /*
+    //取json数据(通过键名来取对应的值)
+    //第一种取值方式，通过 一个"."
+    alert(json.name)
+    alert(json.boyfriend);
+
+    //第二种取值方式，通过 "[]"
+    alert(json["name"])
+    alert(json["boyfriend"]);
+    */
+
+    //如何取到第二层，甚至更多层
+    alert(json.friend.shenzhen)
+    alert(json["friend"]["shenzhen"])
+
+
+
+
+</script>
+
+</body>
+</html>

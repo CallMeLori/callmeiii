@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <p>用户：<input id="user" name="user" type="text"></p>
+    <p>密码: <input type="password" id="pwd" name="pwd"></p>
+
+    <p>保存密码: <input id="ck" name="ck" type="checkbox"> </p>
+    <p><input type="reset" value="取消">  <input type="button" value="登录" onclick="login()"></p>
+
+    <script>
+        /*
+        如果请求非同源的地址，会出现跨域出错的提示
+        开发过程中，可以通过降级浏览器，进行跨域操作
+        在访问的浏览器地址后加上    --disable-web-security --user-data-dir=D:\
+
+         */
+
+
+        var xhr ;
+        function login(){
+            if (window.XMLHttpRequest){
+              //创建xhr对象
+              xhr = new window.XMLHttpRequest();
+            } else {
+              //支持ie8以下
+              xhr = new window.ActiveXObject('Mircosoft.XMLHTTP');
+            }
+            var url = 'http://192.168.30.17:8080/CateringSystem1.0/recruitment/catering/login.do?method=login';
+            //向服务器发送请求
+            xhr.open('post',url);
+            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            //取表单数据
+             var user = document.getElementById('user').value;
+             var pwd  = document.getElementById('pwd').value;
+
+
+
+            xhr.send('memberId='+user+'&password='+pwd);
+
+            //请求返回的状态
+            xhr.onreadystatechange = function(requestText){
+                //与服务交互的一个状态
+                console.log(xhr.readyState);
+                if (xhr.readyState==4 && xhr.status==200){
+                  var json = JSON.parse(xhr.responseText);
+                    console.log(json);
+                  //显示登录成功的信息
+                  if (json.responseBody.memberId !=''){
+                    alert('恭喜你登录成功了！')
+                  } else {
+                    alert('登录失败！')
+                  }
+                }
+
+
+            }
+        }
+
+    </script>
+
+
+
+</body>
+</html>

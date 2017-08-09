@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #ta{
+            width: 1260px;
+            border-collapse: collapse;
+        }
+        th{
+            background-color: #ADD9E6;
+            height: 35px;
+        }
+        td{
+            border: 1px solid black;
+            height: 60px;
+        }
+    </style>
+
+</head>
+<body>
+<table id="ta">
+    <tr>
+        <th>CHAR</th>
+        <th>ID</th>
+        <th>CHAR</th>
+        <th>TEXT</th>
+        <th>DATE</th>
+        <th>TIME</th>
+        <th>NUM</th>
+
+    </tr>
+</table>
+<script>
+    var xhr;
+
+        if(window.XMLHttpRequest){
+            xhr = new window.XMLHttpRequest();
+        }else{
+            xhr = new window.ActiveXObject('Mircosoft.XMLHTTP');
+        }
+        var url = 'http://bsgrid.daoapp.io/examples/grid/data/json.jsp';
+        xhr.open('post',url);
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+        xhr.send('pageSize='+ 10 +'&curPage=' + 1 +'&sortName=' +'&sortOrder=' );
+
+        xhr.onreadystatechange = function(){
+
+            if(xhr.readyState ==4 && xhr.status==200){
+                var json = JSON.parse(xhr.responseText);
+              //  console.log(json);
+//                console.log(json.data);
+              //  console.log(json.data[0]);
+//                console.log(json.data[0].XH);
+//                console.log(json.data[0].CHAR);
+//                console.log(json.data[0].DATE);
+//                console.log(json.data[0].ID);
+//                console.log(json.data[0].NUM);
+//                console.log(json.data[0].TEXT);
+//                console.log(json.data[0].TIME);
+
+
+//                document.write("<table>");
+//                document.write("<tr><th>CHAR</th><th>ID</th><th>CHAR</th> " +
+//                        "<th>TEXT</th><th>DATE</th><th>TIME</th><th>NUM</th></tr>")
+//                for(var i = 0;i<10;i++){
+//                    document.write("<tr><td>"+json.data[i].XH+"</td>"
+//                    +"<td>"+json.data[i].ID+"</td>"
+//                            +"<td>"+json.data[i].CHAR+"</td>"
+//                            +"<td>"+json.data[i].TEXT+"</td>"
+//                            +"<td>"+json.data[i].DATE+"</td>"
+//                            +"<td>"+json.data[i].TIME+"</td>"
+//                            +"<td>"+json.data[i].NUM+"</td></tr>")
+//                }
+//                document.write("</table>");
+
+                  var data = json.data;
+                var ta = document.getElementById('ta');
+                for(var i = 0;i<data.length;i++){
+                    var tr = document.createElement('tr');
+                    var tt = data[i];
+                    for(var m in tt){
+                        var td = document.createElement('td');
+                        td.innerText = data[i][m];
+                        tr.appendChild(td);
+                    }
+                    ta.appendChild(tr);
+                }
+
+
+
+
+            }
+        }
+
+</script>
+
+</body>
+</html>

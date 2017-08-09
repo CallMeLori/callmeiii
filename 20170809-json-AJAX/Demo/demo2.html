@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改json对象的值</title>
+</head>
+<body>
+<script>
+    var json = {
+        "name":"loona",
+        "sex" : "female",
+        "friend":["nana","jiji","koko"],
+        "family":{
+            "mam":"mm",
+            "dad":"dd",
+            "sister":["sisi","didi","lolo"],
+            "bro":["qq","iu"]
+        }
+    };
+    json.name = 'tony';
+    json.sex = 'male';
+    json.friend[0] = 'momo';
+    json.family.bro[1] = 'oo';
+    json.family.dad = 'dada';
+
+//    添加
+
+    json.friend.push("lloo");
+    console.log(json);
+
+//    添加键值对
+
+    json.son = "qqq";
+    json.family.cousin = ['aq1','aq2','aq3'];
+
+</script>
+
+</body>
+</html>

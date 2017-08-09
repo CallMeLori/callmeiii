@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #content{
+            width:100%;
+            height:450px;
+
+        }
+        #box{
+            position: relative;
+            width:800px;
+            height:450px;
+            border:solid 3px blue;
+            margin:0 auto;
+        }
+        #leftButton{
+             position: absolute;
+            top:50%;
+            margin-top:-25px;
+            display: inline-block;
+            width: 50px ;
+            height:50px;
+            background: rgba(0,0,0,.5);
+            color:white;
+            font-size:36px;
+            text-align: center;
+            line-height: 50px;
+
+         }
+        #rightButton{
+            position: absolute;
+            top:50%;
+            margin-top:-25px;
+            right:0px;
+            display: inline-block;
+            width: 50px ;
+            height:50px;
+            background: rgba(0,0,0,.5);
+            color:white;
+            font-size:36px;
+            text-align: center;
+            line-height: 50px;
+        }
+        #lists{
+            position: absolute;
+            bottom: 30px;
+            right:30px;
+            list-style: none;
+        }
+        #lists li{
+
+            float:left;
+            width:50px;
+            height:50px;
+            background:rgba(125,0,0,.5);
+            color:white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            margin:5px;
+        }
+
+        #lists li.blue{
+            background: rgba(0,0,255,.5);
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<div id="content">
+    <div id="box">
+        <img id="tupian" src="img/1.jpg" alt="">
+        <span id="leftButton">&lt;</span>
+        <span id="rightButton">&gt;</span>
+        <ul id="lists">
+            <li class="blue">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+    //左按钮
+    var leftbutton = document.getElementById('leftButton');
+    //右按钮
+    var rightbutton = document.getElementById('rightButton');
+    //图片
+    var tupian  = document.getElementById('tupian');
+    //连动按钮
+    var lists =  document.getElementById('lists');
+    //取所有的li
+    var lis = lists.children;
+
+
+    var i =1;
+    rightbutton.onclick = function(){
+      //右边按钮，实现向后加
+      i++;
+      if (i>5){
+        i=1;
+      }
+      //设置连动按钮高亮
+      for(var h=0;h<lis.length ;h++){
+        var picIndex = lis[h].innerText;
+        if (picIndex ==i){
+          lis[h].className = 'blue';
+        } else {
+          lis[h].className = '';
+        }
+      }
+
+      console.log(i)
+      tupian.src = 'img/'+ i+ '.jpg';
+    }
+
+//    ==============================
+
+    leftbutton.onclick = function(){
+      //左边按钮，实现向后加
+      i--;
+      if (i<1){
+        i=5;
+      }
+
+      //设置连动按钮高亮
+      for(var h=0;h<lis.length ;h++){
+        //取li的文本1，2，3，4，5
+        var picIndex = lis[h].innerText;
+        if (picIndex ==i){
+          lis[h].className = 'blue';
+        } else {
+          lis[h].className = '';
+        }
+      }
+
+
+
+      console.log(i)
+      tupian.src = 'img/'+ i+ '.jpg';
+    }
+
+
+    //绑定li的事件click,mouseover
+    for (var j = 0 ; j<lis.length; j++){
+      lis[j].onmouseover = function(){
+
+        var picIndex = this.innerText;
+        //设置图片 当前的索引值
+        i = picIndex;
+
+        tupian.src = 'img/'+ picIndex+ '.jpg';
+        //取消以前的高亮
+        for(var m=0 ; m <lis.length ;m++ ){
+          lis[m].className = '';
+        }
+        //设置高亮的颜色
+        this.className = 'blue';
+      }
+
+    }
+
+
+</script>
+
+
+</body>
+</html>
